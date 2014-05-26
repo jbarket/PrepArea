@@ -1,0 +1,19 @@
+.card_Common {
+    color: grey;
+}
+
+.card_Uncommon {
+    color: green;
+}
+
+.card_Rare {
+    color: yellow;
+}
+
+.card_Super-Rare {
+    color: red;
+}
+
+.global h2, .global p {
+    color: maroon;
+}

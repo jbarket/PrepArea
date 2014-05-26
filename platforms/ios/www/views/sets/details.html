@@ -1,0 +1,89 @@
+<ion-view title="{{ detailsCtrl.character_name }}">
+    <ion-nav-buttons side="right">
+        <button class="button button-dark" ng-click="detailsCtrl.enableEditing()">
+            <span ng-hide="detailsCtrl.isEditing">Edit</span>
+            <span ng-show="detailsCtrl.isEditing">Finish</span>
+        </button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div ng-hide="detailsCtrl.isEditing" ng-swipe-left="console.log('left')" ng-swipe-right="console.log('right')">
+
+            <div class="card">
+                <div class="item item-divider">
+                    <div class="row">
+                        <div class="col col-50">Dice</div>
+                        <div class="col col-50" style="text-align: right;">
+                            {{ owned[detailsCtrl.set_name + '-dice-' + detailsCtrl.character_name] || 0 }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" ng-repeat="card in detailsCtrl.cards | orderBy:raritySort" ng-model="owned[detailsCtrl.set_name + '-cards-' + card.number]">
+                <div class="item item-text-wrap item-icon-right">
+                    <i ng-show="detailsCtrl.cardOwned(card)" class="icon ion-checkmark-circled"></i>
+                    <h2>{{ card.name }} (#{{ card.number | numberFixedLen:3 }})</h2>
+                    <p>
+                        {{ card.cost }} {{ card.cost_type }}
+                        <span ng-show="card.affiliation"> / {{ card.affiliation }}</span>
+                    </p>
+                </div>
+                <div class="item item-text-wrap item-icon-right">
+                    <i class="icon ion-minus card_{{ card.rarity }}"></i>
+
+                    <div class="row">
+                        <div class="col">
+                            <p>{{ card.ability }}</p>
+                        </div>
+                    </div>
+
+                    <div class="row" ng-show="card.ability_burst">
+                        <div class="col col-20"><h1>*</h1></div>
+                        <div class="col col-80">
+                            <p>{{ card.ability_burst }}</p>
+                        </div>
+                    </div>
+
+                    <div class="row" ng-show="card.ability_double_burst">
+                        <div class="col col-20"><h1>**</h1></div>
+                        <div class="col col-80">
+                            <p>{{ card.ability_double_burst }}</p>
+                        </div>
+                    </div>
+
+                    <div class="row global" ng-show="card.ability_global">
+                        <div class="col col-20"><h2 style="color: maroon;">G</h2></div>
+                        <div class="col col-80">
+                            <p>{{ card.ability_global }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br/>
+
+        </div>
+
+        <ion-list ng-show="detailsCtrl.isEditing">
+            <div class="item item-divider">Dice</div>
+            <div class="item">
+                <div class="row">
+                    <div class="col col-20">
+                        <h1>{{ owned[detailsCtrl.set_name + '-dice-' + detailsCtrl.character_name] || 0 }}</h1>
+                    </div>
+                    <div class="col col-offset-50 col-30">
+                        <button class="button button-dark" ng-click="detailsCtrl.addDie()">+</button>
+                        <button class="button button-dark" ng-click="detailsCtrl.removeDie()">-</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item item-divider">Cards</div>
+            <ion-checkbox class="item-icon-right" ng-repeat="card in detailsCtrl.cards | orderBy:raritySort" ng-model="owned[detailsCtrl.set_name + '-cards-' + card.number]">
+                {{ card.name }} (#{{ card.number | numberFixedLen:3 }})
+                <i class="icon ion-minus card_{{ card.rarity }}"></i>
+            </ion-checkbox>
+
+        </ion-list>
+    </ion-content>
+
+</ion-view>

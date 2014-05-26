@@ -1,0 +1,11 @@
+<ion-view title="Sets">
+    <ion-content>
+
+        <ion-list>
+            <ion-item  ng-repeat="set in setsCtrl.sets" ui-sref="characters({ setName: set.name })">
+                {{ set.name }}
+                <span class="item-note">{{ cardCount(set) }}</span>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,19 @@
+{
+  "name": "preparea",
+  "version": "0.0.1",
+  "authors": [
+    "jbarket <jbarket@sleepunit.com>"
+  ],
+  "private": true,
+  "dependencies": {
+    "ionic": "1.0.0-beta.4",
+    "angular-localForage": "~0.2.3"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
