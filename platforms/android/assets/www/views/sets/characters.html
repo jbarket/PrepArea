@@ -2,7 +2,7 @@
 
     <ion-content>
         <ion-list>
-            <ion-item ng-repeat="character in charactersCtrl.characters" ui-sref="details({ setName: charactersCtrl.set_name, characterName: character.name })">
+            <ion-item ng-repeat="character in charactersCtrl.characters" ui-sref="tabs.details({ setName: charactersCtrl.set_name, characterName: character.name })">
                 {{ character.name }}
                 <span class="item-note">{{ cardCount(character.cards) }}</span>
             </ion-item>

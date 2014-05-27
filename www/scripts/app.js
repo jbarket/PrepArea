@@ -1,6 +1,12 @@
-angular.module('app', ['collection', 'ionic', 'ui.router', 'LocalForageModule',
+angular.module('app', ['teams', 'collection', 'ionic', 'ui.router', 'LocalForageModule',
     'providers', 'formatters'])
-
+    .run(['$ionicPlatform',
+        function($ionicPlatform) {
+            $ionicPlatform.ready(function() {
+                analytics.startTrackerWithId('UA-51386708-1');
+            });
+        }
+    ])
     .config(function($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise("/tab/sets");
 

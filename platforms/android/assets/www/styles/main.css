@@ -17,3 +17,7 @@
 .global h2, .global p {
     color: maroon;
 }
+
+.dice {
+    text-align: right;
+}
