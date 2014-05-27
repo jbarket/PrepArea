@@ -3,6 +3,7 @@ angular.module('providers', [])
         var gameSets = [
             {
                 name: 'Avengers vs. X-Men',
+                short: 'AVX',
                 release_date: '4/23/2014',
                 basic: [
                     {"number":25,"name":"Distraction","cost":4,"cost_type":"Generic","affiliation":"","rarity":"Common","die_limit":3,"starter":"Y","ability":"Your opponent targets two of his or her characters. Those characters cannot block (this turn).","ability_burst":"","ability_double_burst":null,"ability_global":"Pay [1 Mask] to remove one attacker from the attack zone to the field."},
@@ -356,6 +357,31 @@ angular.module('providers', [])
                         return characters[0];
                 }
             },
+            findCardBySetAndNumber: function (setName, cardNumber) {
+                var set = this.find(setName);
+                var found_card = null;
+
+                if (set) {
+
+                    angular.forEach(set.characters, function (character) {
+
+                        angular.forEach(character.cards, function (card) {
+
+                            if (card.number == cardNumber) {
+                                found_card = card;
+                                found_card.set = set.name;
+                                found_card.character = character.name;
+                            }
+
+                        });
+
+                    });
+
+                }
+
+                return found_card;
+
+            },
             findNext: function (setName, character) {
                 var set = this.find(setName);
                 var characters = set.characters;
@@ -372,6 +398,32 @@ angular.module('providers', [])
                 if (index > 0) {
                     return characters[index - 1];
                 }
+            },
+            characterCards: function () {
+                var characters = {};
+
+                angular.forEach(gameSets, function (set) {
+
+                    angular.forEach(set.characters, function (character) {
+
+                        if (!characters[character.name])
+                        {
+                            characters[character.name] = { name: character.name, cards: [] };
+                        }
+
+                        angular.forEach(character.cards, function (card) {
+                            var set_card = card;
+                            set_card.set = set.name;
+                            characters[character.name].cards.push(set_card);
+                        });
+
+
+                    });
+
+                });
+
+                return characters;
+
             }
 
         };
