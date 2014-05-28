@@ -9,6 +9,14 @@
 
         <ion-list>
 
+            <div ng-show="diceCtrl.teamCards().length === 0">
+                <div class="card">
+                    <div class="item item-text-wrap">
+                        <p>You have no character cards on this team. You'll be able to set dice once you add some.</p>
+                    </div>
+                </div>
+            </div>
+
             <div class="card" ng-repeat="card in diceCtrl.teamCards() | orderBy:'character'">
 
                 <div class="item item-divider">{{ card.character }} &mdash; {{ card.name }} (#{{ card.number | numberFixedLen:3 }})</div>

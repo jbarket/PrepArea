@@ -145,6 +145,13 @@ angular.module('app', ['teams', 'collection', 'ionic', 'ui.router', 'LocalForage
                 }
             }, true);
 
+            $rootScope.$watch('teams', function() {
+                if ($rootScope.teams !== undefined) {
+                    console.log("[LF] Team change detected. Persisting.");
+                    $localForage.setItem('teams', $rootScope.teams);
+                }
+            }, true);
+
             $rootScope.raritySort = function(card) {
                 switch(card.rarity) {
                     case "Common":

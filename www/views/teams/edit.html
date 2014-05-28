@@ -14,11 +14,15 @@
                     <input type="text" ng-model="team.name">
                 </label>
                 <label class="item item-input">
-                    <span class="input-label">Total Cards</span>
+                    <span class="input-label">Action Cards</span>
+                    {{ editCtrl.basicCards() }}
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Character Cards</span>
                     {{ editCtrl.totalCards() }}
                 </label>
                 <label class="item item-input">
-                    <span class="input-label">Total Dice</span>
+                    <span class="input-label">Character Dice</span>
                     {{ editCtrl.totalDice() }}
                 </label>
             </div>

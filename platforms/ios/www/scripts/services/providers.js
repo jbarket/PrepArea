@@ -1,5 +1,5 @@
 angular.module('providers', [])
-    .factory('Sets', function($filter) {
+    .factory('Sets', function($filter, filterFilter) {
         var gameSets = [
             {
                 name: 'Avengers vs. X-Men',
@@ -7,6 +7,7 @@ angular.module('providers', [])
                 release_date: '4/23/2014',
                 basic: [
                     {"number":25,"name":"Distraction","cost":4,"cost_type":"Generic","affiliation":"","rarity":"Common","die_limit":3,"starter":"Y","ability":"Your opponent targets two of his or her characters. Those characters cannot block (this turn).","ability_burst":"","ability_double_burst":null,"ability_global":"Pay [1 Mask] to remove one attacker from the attack zone to the field."},
+                    {"number":26,"name":"Focus Power","cost":4,"cost_type":"Generic","affiliation":"","rarity":"Common","die_limit":3,"starter":"Y","ability":"Spin one target character up or down one level.","ability_burst":"Spin another target character up or down one level.","ability_double_burst":"","ability_global":""},
                     {"number":27,"name":"Force Beam","cost":3,"cost_type":"Generic","affiliation":"","rarity":"Common","die_limit":3,"starter":"Y","ability":"Deal 1 damage to each character (including yours).","ability_burst":"Instead, deal 2 damage to each character.","ability_double_burst":"Instead, deal 1 damage to each player and 2 damage to each character.","ability_global":""},
                     {"number":28,"name":"Gearing Up","cost":4,"cost_type":"Generic","affiliation":"","rarity":"Common","die_limit":3,"starter":"Y","ability":"Draw two dice from your bag and roll them (place them in your reserve pool).","ability_burst":"","ability_double_burst":null,"ability_global":""},
                     {"number":29,"name":"Inner Rage","cost":3,"cost_type":"Generic","affiliation":"","rarity":"Common","die_limit":3,"starter":"Y","ability":"Two of your target characters get +1A and +1D (until the end of the turn).","ability_burst":"Those characters get an additional +1A and +1D.","ability_double_burst":"Those characters get an additional +1A and +1D.","ability_global":""},
@@ -22,7 +23,7 @@ angular.module('providers', [])
                         "cards": [
                             {"number":99,"name":"Soaring","cost":2,"cost_type":"Shield","affiliation":"","rarity":"Rare","die_limit":4,"starter":"","ability":"If you used an action this turn, Angel cannot be blocked.","ability_burst":"","ability_double_burst":null,"ability_global":""},
                             {"number":65,"name":"Avenging Angel","cost":3,"cost_type":"Shield","affiliation":"","rarity":"Uncommon","die_limit":4,"starter":"","ability":"If Angel is blocked but is not knocked out, he deals 2 damage to the opposing player.","ability_burst":"","ability_double_burst":null,"ability_global":""},
-                            {"number":35,"name":"High Ground","cost":3,"cost_type":"Shield","affiliation":"","rarity":"Common","die_limit":null,"starter":"","ability":"Angel cannot be blocked by a character with a lower level.","ability_burst":"","ability_double_burst":null,"ability_global":""}
+                            {"number":35,"name":"High Ground","cost":3,"cost_type":"Shield","affiliation":"","rarity":"Common","die_limit":4,"starter":"","ability":"Angel cannot be blocked by a character with a lower level.","ability_burst":"","ability_double_burst":null,"ability_global":""}
                         ]
 
                     },
@@ -382,6 +383,26 @@ angular.module('providers', [])
                 return found_card;
 
             },
+            findBasicCardBySetAndNumber: function (setName, cardNumber) {
+                var set = this.find(setName);
+                var found_card = null;
+
+                if (set) {
+
+                    angular.forEach(set.basic, function (card) {
+
+                        if (card.number == cardNumber) {
+                            found_card = card;
+                            found_card.set = set.name;
+                        }
+
+                    });
+
+                }
+
+                return found_card;
+
+            },
             findNext: function (setName, character) {
                 var set = this.find(setName);
                 var characters = set.characters;
@@ -401,8 +422,19 @@ angular.module('providers', [])
             },
             characterCards: function () {
                 var characters = {};
+                var charactersArray = [];
+                var basicsArray = [];
+                var cardCollection = [];
+
+                cardCollection.push({ name: "Basic Action Card", isCharacter: true });
 
                 angular.forEach(gameSets, function (set) {
+
+                    angular.forEach(set.basic, function (card) {
+                        var set_card = card;
+                        set_card.set = set.name;
+                        cardCollection.push(set_card);
+                    });
 
                     angular.forEach(set.characters, function (character) {
 
@@ -422,12 +454,174 @@ angular.module('providers', [])
 
                 });
 
-                return characters;
 
+
+                angular.forEach(characters, function (character) {
+                    charactersArray.push(character);
+                });
+
+
+                charactersArray.sort(function(a, b) {
+                        return a.name > b.name ? 1 : -1;
+                    })
+                    .forEach(function (character) {
+                        cardCollection.push({ name: character.name, isCharacter: true });
+
+                        character.cards.sort(function(a, b) {
+                                return Set.cardSortValue(a) > Set.cardSortValue(b) ? 1 : -1;
+                            })
+                            .forEach(function (card) {
+                                cardCollection.push(card);
+                            });
+                    });
+
+                return cardCollection;
+
+            },
+            cardSortValue: function (card) {
+                switch(card.rarity) {
+                    case "Common":
+                        return card.number;
+                    case "Uncommon":
+                        return card.number + 1000;
+                    case "Rare":
+                        return card.number + 2000;
+                    case "Super-Rare":
+                        return card.number + 3000;
+                }
             }
 
         };
 
         return Set;
+
+    })
+    .factory('Teams', function($localForage, $rootScope, $filter, Sets) {
+
+
+        var Team = {
+            all: $rootScope.teams,
+            find: function (uuid) {
+                var teams = $filter('filter')($rootScope.teams, { uuid: uuid }, true);
+                console.log("about to log teams");
+                console.log(teams);
+
+                if (teams && teams.length > 0)
+                    return teams[0];
+            },
+            new: function () {
+                var team = { name: "New Team", set_cards: {}, dice: {}, uuid: this.guid() };
+                $rootScope.teams.push(team);
+                return team.uuid;
+            },
+            remove: function (team) {
+                $rootScope.teams.splice($rootScope.teams.indexOf(team), 1);
+            },
+            guid: function() {
+                var d = new Date().getTime();
+                var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                    var r = (d + Math.random()*16)%16 | 0;
+                    d = Math.floor(d/16);
+                    return (c=='x' ? r : (r&0x7|0x8)).toString(16);
+                });
+                return uuid;
+            },
+            totalCards: function (team) {
+                total = 0;
+
+                angular.forEach(team.set_cards, function (value, set_card) {
+                    if (value) {
+                        // split at last -
+                        var n = set_card.lastIndexOf('-');
+                        var cardNumber = set_card.substring(n + 1);
+                        var setName = set_card.substring(0, n);
+                        var card = Sets.findCardBySetAndNumber(setName, cardNumber);
+
+                        if (card)
+                            total++;
+                    }
+                });
+
+                return total;
+
+            },
+            totalDice: function (team) {
+                var total = 0;
+
+                angular.forEach(team.set_cards, function (value, set_card) {
+                    if (value) {
+                        var dice = team.dice[set_card];
+
+                        if (dice) {
+                            total += dice;
+                        }
+                    }
+                });
+
+                return total;
+            },
+            basicCards: function (team) {
+                var cards = [];
+
+                angular.forEach(team.set_cards, function (value, set_card) {
+
+                    if (value) {
+                        // split at last -
+                        var n = set_card.lastIndexOf('-');
+                        var cardNumber = set_card.substring(n + 1);
+                        var setName = set_card.substring(0, n);
+                        var card = Sets.findBasicCardBySetAndNumber(setName, cardNumber);
+
+                        if (card)
+                            cards.push(card);
+                    }
+                });
+
+                return cards;
+            },
+            teamCards: function (team) {
+                var cards = [];
+
+                angular.forEach(team.set_cards, function (value, set_card) {
+
+                    if (value) {
+                        // split at last -
+                        var n = set_card.lastIndexOf('-');
+                        var cardNumber = set_card.substring(n + 1);
+                        var setName = set_card.substring(0, n);
+                        var card = Sets.findCardBySetAndNumber(setName, cardNumber);
+
+                        if (card)
+                            cards.push(card);
+                    }
+                });
+
+                return cards;
+            },
+            addDie: function (team, card) {
+                var natural_key = card.set + '-' + card.number;
+
+                if (!team.dice[natural_key]) {
+                    team.dice[natural_key] = 1;
+                }
+                else  {
+                    if (!card.die_limit || team.dice[natural_key] < card.die_limit) {
+                        team.dice[natural_key]++;
+                    }
+                }
+            },
+            removeDie: function (team, card) {
+                var natural_key = card.set + '-' + card.number;
+
+                if (!team.dice[natural_key]) {
+                    team.dice[natural_key] = 0;
+                }
+                else if (team.dice[natural_key] > 0) {
+                    team.dice[natural_key]--;
+                }
+            }
+        };
+
+        return Team;
 
     });

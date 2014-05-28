@@ -1,39 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cbfbff68-a640-47eb-a9c7-e176bb5e4e60" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/sets/basic.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/views/sets/basic.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/views/sets/basic.html" />
+    <list default="true" id="cbfbff68-a640-47eb-a9c7-e176bb5e4e60" name="Default" comment="Basic cards too. Don't necessarily like how they're included, but it works in most places. No swiping between basic cards and characters in collection.&#10;&#10;Tested without $watch on teams. Made no performance difference at all.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Prep Area/Resources/splash/1024x768.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Prep Area/Resources/icons/114x114'.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Prep Area/Resources/icons/120x120.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Prep Area/Resources/icons/144x144.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Prep Area/Resources/icons/152x152.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Prep Area/Resources/splash/1536x2048.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Prep Area/Resources/splash/2048x1536.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Prep Area/Resources/icons/57x57.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Prep Area/Resources/icons/72x72.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Prep Area/Resources/icons/76.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Prep Area/Resources/splash/768x1024.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Prep Area/Resources/splash/Default-568h@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Prep Area/Resources/splash/Default-Landscape.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Prep Area/Resources/splash/Default-Landscape@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Prep Area/Resources/splash/Default-Portrait@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Prep Area/Resources/splash/Default.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Prep Area/Resources/splash/Default@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Prep Area/Resources/splash/Default~ipad.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Prep Area.xcodeproj/project.xcworkspace/xcuserdata/jbarket.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/CordovaLib/CordovaLib.xcodeproj/xcuserdata/jbarket.xcuserdatad/xcschemes/CordovaLib.xcscheme" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Prep Area.xcodeproj/project.xcworkspace/xcshareddata/Prep Area.xccheckout" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Prep Area.xcodeproj/xcuserdata/jbarket.xcuserdatad/xcschemes/Prep Area.xcscheme" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/views/sets/basic.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Prep Area.xcodeproj/project.xcworkspace/contents.xcworkspacedata" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/views/teams/dice.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/views/teams/edit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/CordovaLib/CordovaLib.xcodeproj/xcuserdata/jbarket.xcuserdatad/xcschemes/xcschememanagement.plist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Prep Area.xcodeproj/xcuserdata/jbarket.xcuserdatad/xcschemes/xcschememanagement.plist" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/Prep Area/Resources/splash/Default-568h@2x~iphone.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/Prep Area/Resources/splash/Default-Landscape@2x~ipad.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/Prep Area/Resources/splash/Default-Landscape~ipad.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/Prep Area/Resources/splash/Default-Portrait@2x~ipad.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/Prep Area/Resources/splash/Default-Portrait~ipad.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/Prep Area/Resources/splash/Default@2x~iphone.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/Prep Area/Resources/splash/Default~iphone.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/PrepArea-release-unsigned.apk" afterPath="$PROJECT_DIR$/platforms/android/ant-build/PrepArea-release-unsigned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/PrepArea.apk" afterPath="$PROJECT_DIR$/platforms/android/ant-build/PrepArea.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.js" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/Prep Area/Prep Area-Info.plist" afterPath="$PROJECT_DIR$/platforms/ios/Prep Area/Prep Area-Info.plist" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/scripts/app.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/scripts/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/scripts/app.js" afterPath="$PROJECT_DIR$/platforms/ios/www/scripts/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/scripts/app.js" afterPath="$PROJECT_DIR$/www/scripts/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/build.prop" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/build.prop" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/build.prop" afterPath="$PROJECT_DIR$/platforms/android/ant-build/build.prop" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/teams/cards.html" afterPath="$PROJECT_DIR$/app/views/teams/cards.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/views/teams/cards.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/views/teams/cards.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/views/teams/cards.html" afterPath="$PROJECT_DIR$/www/views/teams/cards.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/sets/characters.html" afterPath="$PROJECT_DIR$/app/views/sets/characters.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/views/sets/characters.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/views/sets/characters.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/views/sets/characters.html" afterPath="$PROJECT_DIR$/www/views/sets/characters.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/collection.js" afterPath="$PROJECT_DIR$/app/scripts/collection.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/scripts/collection.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/scripts/collection.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/scripts/collection.js" afterPath="$PROJECT_DIR$/www/scripts/collection.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/views/teams/cards.html" afterPath="$PROJECT_DIR$/platforms/ios/www/views/teams/cards.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/views/sets/characters.html" afterPath="$PROJECT_DIR$/platforms/ios/www/views/sets/characters.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/scripts/collection.js" afterPath="$PROJECT_DIR$/platforms/ios/www/scripts/collection.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/teams/dice.html" afterPath="$PROJECT_DIR$/app/views/teams/dice.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/views/teams/dice.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/views/teams/dice.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/views/teams/dice.html" afterPath="$PROJECT_DIR$/www/views/teams/dice.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/teams/edit.html" afterPath="$PROJECT_DIR$/app/views/teams/edit.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/views/teams/edit.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/views/teams/edit.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/views/teams/edit.html" afterPath="$PROJECT_DIR$/www/views/teams/edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/main.css" afterPath="$PROJECT_DIR$/app/styles/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/styles/main.css" afterPath="$PROJECT_DIR$/platforms/android/assets/www/styles/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/styles/main.css" afterPath="$PROJECT_DIR$/www/styles/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/services/providers.js" afterPath="$PROJECT_DIR$/app/scripts/services/providers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/scripts/services/providers.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/scripts/services/providers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/scripts/services/providers.js" afterPath="$PROJECT_DIR$/www/scripts/services/providers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/teams/show.html" afterPath="$PROJECT_DIR$/app/views/teams/show.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/views/teams/show.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/views/teams/show.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/views/teams/show.html" afterPath="$PROJECT_DIR$/www/views/teams/show.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/index.html" afterPath="$PROJECT_DIR$/platforms/ios/www/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/styles/main.css" afterPath="$PROJECT_DIR$/platforms/ios/www/styles/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/Prep Area.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/platforms/ios/Prep Area.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/scripts/services/providers.js" afterPath="$PROJECT_DIR$/platforms/ios/www/scripts/services/providers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/views/teams/show.html" afterPath="$PROJECT_DIR$/platforms/ios/www/views/teams/show.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/views/teams/teams.html" afterPath="$PROJECT_DIR$/platforms/ios/www/views/teams/teams.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/teams.js" afterPath="$PROJECT_DIR$/app/scripts/teams.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/scripts/teams.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/scripts/teams.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/scripts/teams.js" afterPath="$PROJECT_DIR$/platforms/ios/www/scripts/teams.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/scripts/teams.js" afterPath="$PROJECT_DIR$/www/scripts/teams.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -70,10 +99,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.5576208" vertical-offset="1995" max-vertical-offset="2685">
+                <state vertical-scroll-proportion="0.0" vertical-offset="1995" max-vertical-offset="2685">
                   <caret line="153" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
                   <folding />
                 </state>
@@ -115,8 +144,8 @@
           <file leaf-file-name="dice.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/views/teams/dice.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="570">
-                  <caret line="21" column="96" selection-start-line="21" selection-start-column="96" selection-end-line="21" selection-end-column="96" />
+                <state vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="690">
+                  <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -152,14 +181,24 @@
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="teams.js" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/scripts/teams.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="1.126394" vertical-offset="399" max-vertical-offset="1980">
+                  <caret line="67" column="27" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
         </leaf>
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="characters.html" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="characters.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/views/sets/characters.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.3721374" vertical-offset="0" max-vertical-offset="524">
+                <state vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="330">
                   <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
                   <folding />
                 </state>
@@ -169,8 +208,8 @@
           <file leaf-file-name="show.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/views/teams/show.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-20.583334" vertical-offset="991" max-vertical-offset="1650">
-                  <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+                <state vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="1650">
+                  <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
                   <folding>
                     <element signature="n#style#0;n#h2#0;n#div#0;n#div#3;n#div#1;n#div#1;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#h2#0;n#div#0;n#div#3;n#div#1;n#div#2;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
@@ -179,11 +218,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="edit.html" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="edit.html" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/views/teams/edit.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="720">
-                  <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+                <state vertical-scroll-proportion="0.53072625" vertical-offset="0" max-vertical-offset="780">
+                  <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -194,16 +233,6 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="495">
                   <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="teams.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/scripts/teams.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="354" max-vertical-offset="1920">
-                  <caret line="48" column="34" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
                   <folding />
                 </state>
               </provider>
@@ -266,18 +295,18 @@
         <option value="$PROJECT_DIR$/platforms/android/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/app/index.html" />
-        <option value="$PROJECT_DIR$/app/views/teams/dice.html" />
         <option value="$PROJECT_DIR$/app/views/teams/teams.html" />
-        <option value="$PROJECT_DIR$/app/views/teams/edit.html" />
         <option value="$PROJECT_DIR$/app/views/teams/cards.html" />
         <option value="$PROJECT_DIR$/app/styles/main.css" />
-        <option value="$PROJECT_DIR$/app/scripts/teams.js" />
         <option value="$PROJECT_DIR$/app/views/teams/show.html" />
         <option value="$PROJECT_DIR$/app/views/sets/characters.html" />
         <option value="$PROJECT_DIR$/app/views/sets/basic.html" />
         <option value="$PROJECT_DIR$/app/scripts/collection.js" />
         <option value="$PROJECT_DIR$/app/scripts/services/providers.js" />
         <option value="$PROJECT_DIR$/app/scripts/app.js" />
+        <option value="$PROJECT_DIR$/app/views/teams/dice.html" />
+        <option value="$PROJECT_DIR$/app/scripts/teams.js" />
+        <option value="$PROJECT_DIR$/app/views/teams/edit.html" />
       </list>
     </option>
   </component>
@@ -453,6 +482,156 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="platforms">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="preparea">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="platforms">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="ios">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="preparea">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="platforms">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="ios">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="www">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="preparea">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="platforms">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="ios">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="CordovaLib">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="preparea">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="platforms">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="ios">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="CordovaLib">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="CordovaLib.xcodeproj">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="preparea">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="platforms">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="ios">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="build">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Prep Area.build">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="preparea">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="platforms">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="ios">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="build">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="preparea">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="app">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
@@ -472,68 +651,6 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="views">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="preparea">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="views">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="teams">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="preparea">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="views">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="sets">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="preparea">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="scripts">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -681,7 +798,11 @@
       <created>1401288458249</created>
       <updated>1401288458249</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Basic cards too. Don't necessarily like how they're included, but it works in most places. No swiping between basic cards and characters in collection.&#10;&#10;Tested without $watch on teams. Made no performance difference at all.">
+      <created>1401305681765</created>
+      <updated>1401305681765</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -752,7 +873,8 @@
     <MESSAGE value="Incremented Android version for next release.&#10;&#10;Split collection and team code into separate files.&#10;&#10;Initial team building code" />
     <MESSAGE value="Was missing module inclusion for split out team file" />
     <MESSAGE value="Split complex team edit view into multiple pages. Hand holding navigation back button for edit workflow since it really doesn't make sense in the traditional way.&#10;&#10;Moved all team logic into a factory." />
-    <option name="LAST_COMMIT_MESSAGE" value="Split complex team edit view into multiple pages. Hand holding navigation back button for edit workflow since it really doesn't make sense in the traditional way.&#10;&#10;Moved all team logic into a factory." />
+    <MESSAGE value="Basic cards too. Don't necessarily like how they're included, but it works in most places. No swiping between basic cards and characters in collection.&#10;&#10;Tested without $watch on teams. Made no performance difference at all." />
+    <option name="LAST_COMMIT_MESSAGE" value="Basic cards too. Don't necessarily like how they're included, but it works in most places. No swiping between basic cards and characters in collection.&#10;&#10;Tested without $watch on teams. Made no performance difference at all." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1032,14 +1154,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/teams/dice.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="570">
-          <caret line="21" column="96" selection-start-line="21" selection-start-column="96" selection-end-line="21" selection-end-column="96" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tabs.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="255">
@@ -1052,14 +1166,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
           <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/teams/edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="933">
-          <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -1080,30 +1186,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/teams.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="354" max-vertical-offset="1920">
-          <caret line="48" column="34" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/sets/sets.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="537">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/teams/show.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.583334" vertical-offset="991" max-vertical-offset="1650">
-          <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#h2#0;n#div#0;n#div#3;n#div#1;n#div#1;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#div#0;n#div#3;n#div#1;n#div#2;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1143,7 +1230,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/sets/characters.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3721374" vertical-offset="0" max-vertical-offset="524">
+        <state vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="330">
           <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
           <folding />
         </state>
@@ -1151,8 +1238,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5576208" vertical-offset="1995" max-vertical-offset="2685">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1995" max-vertical-offset="2685">
           <caret line="153" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/teams/dice.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="690">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/teams/show.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="1650">
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#3;n#div#1;n#div#1;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#3;n#div#1;n#div#2;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/teams.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.126394" vertical-offset="399" max-vertical-offset="1980">
+          <caret line="67" column="27" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/teams/edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.53072625" vertical-offset="0" max-vertical-offset="780">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -21,3 +21,14 @@
 .dice {
     text-align: right;
 }
+
+.card-item {
+    left: 0;
+    right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.card-item.item-card {
+    padding: 0;
+}

@@ -64,6 +64,10 @@ angular.module('teams', ['collection', 'ionic', 'ui.router', 'LocalForageModule'
                 $state.go('tabs.show', { uuid: $scope.team.uuid });
             };
 
+            this.basicCards = function () {
+                return Teams.basicCards($scope.team).length;
+            };
+
             this.totalCards = function () {
                 return Teams.totalCards($scope.team);
             };
