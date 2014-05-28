@@ -2,6 +2,10 @@
 
     <ion-content>
         <ion-list>
+            <ion-item ui-sref="tabs.basic({ setName: charactersCtrl.set_name })">
+                Basic Action Cards
+                <span class="item-note">{{ basicCount(charactersCtrl.set) }}</span>
+            </ion-item>
             <ion-item ng-repeat="character in charactersCtrl.characters" ui-sref="tabs.details({ setName: charactersCtrl.set_name, characterName: character.name })">
                 {{ character.name }}
                 <span class="item-note">{{ cardCount(character.cards) }}</span>

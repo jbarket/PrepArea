@@ -34,6 +34,15 @@ angular.module('app', ['teams', 'collection', 'ionic', 'ui.router', 'LocalForage
                     }
                 }
             })
+            .state('tabs.basic', {
+                url: '/basics/:setName',
+                views: {
+                    'collection-tab': {
+                        templateUrl: 'views/sets/basic.html',
+                        controller: 'BasicCtrl as basicCtrl'
+                    }
+                }
+            })
             .state('tabs.details', {
                 url: '/characters/:setName/details/:characterName',
                 views: {
@@ -133,13 +142,6 @@ angular.module('app', ['teams', 'collection', 'ionic', 'ui.router', 'LocalForage
             $rootScope.$watch('owned', function() {
                 if ($rootScope.owned !== undefined) {
                     $localForage.setItem('owned', $rootScope.owned);
-                }
-            }, true);
-
-            $rootScope.$watch('teams', function() {
-                if ($rootScope.teams !== undefined) {
-                    console.log("[LF] Team change detected. Persisting.");
-                    $localForage.setItem('teams', $rootScope.teams);
                 }
             }, true);
 

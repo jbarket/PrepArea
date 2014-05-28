@@ -45,6 +45,10 @@ angular.module('teams', ['collection', 'ionic', 'ui.router', 'LocalForageModule'
 
             $scope.team = Teams.find($stateParams.uuid);
 
+            this.basicCards = function () {
+                return Teams.basicCards($scope.team);
+            };
+
             this.teamCards = function () {
                 return Teams.teamCards($scope.team);
             };
@@ -74,7 +78,15 @@ angular.module('teams', ['collection', 'ionic', 'ui.router', 'LocalForageModule'
         function($scope, $stateParams, $state, Sets, Teams) {
 
             $scope.team = Teams.find($stateParams.uuid);
-            this.characters = Sets.characterCards();
+            this.cards = Sets.characterCards();
+
+            $scope.getCardHeight = function (card) {
+                return card.isCharacter ? 40 : 53;
+            };
+
+            $scope.getCardWidth = function (card) {
+                return '100%';
+            };
 
             this.finish = function () {
                 $state.go('tabs.edit', { uuid: $scope.team.uuid });

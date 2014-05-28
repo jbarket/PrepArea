@@ -18,6 +18,13 @@ angular.module('collection', ['ionic', 'ui.router', 'LocalForageModule',
                     });
                 });
 
+                angular.forEach(set.basic, function (card) {
+                    if ($scope.owned && $scope.owned[set.name + '-cards-' + card.number]) {
+                        owned++;
+                    }
+                    total++;
+                });
+
                 return owned + " / " + total;
             };
 
@@ -40,6 +47,20 @@ angular.module('collection', ['ionic', 'ui.router', 'LocalForageModule',
                 });
 
                 return owned + " / " + cards.length;
+            };
+
+            $scope.basicCount = function (set) {
+                total = 0;
+                owned = 0;
+
+                angular.forEach(set.basic, function (card) {
+                    if ($scope.owned && $scope.owned[set.name + '-cards-' + card.number]) {
+                        owned++;
+                    }
+                    total++;
+                });
+
+                return owned + " / " + total;
             };
 
         }
@@ -118,6 +139,32 @@ angular.module('collection', ['ionic', 'ui.router', 'LocalForageModule',
                     this.setCharacter(previous);
                 }
 
+            };
+
+        }
+    ])
+    .controller('BasicCtrl', ['$scope', '$stateParams',
+        '$ionicScrollDelegate', 'Sets', '$ionicNavBarDelegate',
+        function($scope, $stateParams, $ionicScrollDelegate, Sets, $ionicNavBarDelegate) {
+            this.set_name = $stateParams.setName;
+            this.set = Sets.find(this.set_name);
+            this.cards = this.set.basic;
+            $ionicNavBarDelegate.setTitle("Basic Action Cards");
+
+            this.isEditing = false;
+
+            this.enableEditing = function () {
+                this.isEditing = !this.isEditing;
+                $ionicScrollDelegate.scrollTop();
+            };
+
+            this.cardOwned = function (card) {
+                if ($scope.owned && $scope.owned[$stateParams.setName + '-cards-' + card.number]) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
             };
 
         }

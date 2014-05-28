@@ -2,93 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cbfbff68-a640-47eb-a9c7-e176bb5e4e60" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/com/danielcwilson/plugins/analytics/UniversalAnalyticsPlugin.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/com.danielcwilson.plugins.googleanalytics/ios/libAdIdAccess.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/dexedLibs/libGoogleAnalyticsServices-33fbf2607394844a7753cff1648016d6.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Prep Area/Plugins/com.danielcwilson.plugins.googleanalytics/libGoogleAnalyticsServices.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/com.danielcwilson.plugins.googleanalytics/ios/libGoogleAnalyticsServices.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/libs/libGoogleAnalyticsServices.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/com.danielcwilson.plugins.googleanalytics/android/libGoogleAnalyticsServices.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/com.danielcwilson.plugins.googleanalytics/.fetch.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/com.danielcwilson.plugins.googleanalytics/lavaca/AnalyticsService.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Prep Area/Plugins/com.danielcwilson.plugins.googleanalytics/GAI.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/com.danielcwilson.plugins.googleanalytics/ios/GAI.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Prep Area/Plugins/com.danielcwilson.plugins.googleanalytics/GAIDictionaryBuilder.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/com.danielcwilson.plugins.googleanalytics/ios/GAIDictionaryBuilder.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Prep Area/Plugins/com.danielcwilson.plugins.googleanalytics/GAIFields.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/com.danielcwilson.plugins.googleanalytics/ios/GAIFields.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Prep Area/Plugins/com.danielcwilson.plugins.googleanalytics/GAILogger.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/com.danielcwilson.plugins.googleanalytics/ios/GAILogger.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Prep Area/Plugins/com.danielcwilson.plugins.googleanalytics/GAITrackedViewController.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/com.danielcwilson.plugins.googleanalytics/ios/GAITrackedViewController.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Prep Area/Plugins/com.danielcwilson.plugins.googleanalytics/GAITracker.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/com.danielcwilson.plugins.googleanalytics/ios/GAITracker.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/com.danielcwilson.plugins.googleanalytics/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/com.danielcwilson.plugins.googleanalytics/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Prep Area/Plugins/com.danielcwilson.plugins.googleanalytics/UniversalAnalyticsPlugin.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/com.danielcwilson.plugins.googleanalytics/ios/UniversalAnalyticsPlugin.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/com/danielcwilson/plugins/analytics/UniversalAnalyticsPlugin.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/com.danielcwilson.plugins.googleanalytics/android/UniversalAnalyticsPlugin.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Prep Area/Plugins/com.danielcwilson.plugins.googleanalytics/UniversalAnalyticsPlugin.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/com.danielcwilson.plugins.googleanalytics/ios/UniversalAnalyticsPlugin.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/plugins/com.danielcwilson.plugins.googleanalytics/www/analytics.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/plugins/com.danielcwilson.plugins.googleanalytics/www/analytics.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/com.danielcwilson.plugins.googleanalytics/www/analytics.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/views/teams/cards.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/views/teams/cards.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/scripts/collection.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/scripts/collection.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/teams/dice.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/views/teams/dice.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/views/teams/dice.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/teams/edit.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/views/teams/edit.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/views/teams/edit.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/jarlist.cache" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/com.danielcwilson.plugins.googleanalytics/plugin.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/views/teams/show.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/views/teams/show.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/views/tabs.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/views/tabs.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/views/teams/teams.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/views/teams/teams.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/scripts/teams.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/scripts/teams.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/PrepArea-debug-unaligned.apk" afterPath="$PROJECT_DIR$/platforms/android/ant-build/PrepArea-debug-unaligned.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/PrepArea-debug.apk" afterPath="$PROJECT_DIR$/platforms/android/ant-build/PrepArea-debug.apk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/sets/basic.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/views/sets/basic.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/views/sets/basic.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/PrepArea-release-unsigned.apk" afterPath="$PROJECT_DIR$/platforms/android/ant-build/PrepArea-release-unsigned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/PrepArea.apk" afterPath="$PROJECT_DIR$/platforms/android/ant-build/PrepArea.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/dexedLibs/classes-45f3f55caf02aab98657b84a40803248.jar" afterPath="$PROJECT_DIR$/platforms/android/ant-build/dexedLibs/classes-45f3f55caf02aab98657b84a40803248.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes.jar" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/Prep Area/Prep Area-Info.plist" afterPath="$PROJECT_DIR$/platforms/ios/Prep Area/Prep Area-Info.plist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/PrepArea-debug-unaligned.apk.d" afterPath="$PROJECT_DIR$/platforms/android/ant-build/PrepArea-debug-unaligned.apk.d" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.js" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/scripts/app.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/scripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/scripts/app.js" afterPath="$PROJECT_DIR$/platforms/ios/www/scripts/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/scripts/app.js" afterPath="$PROJECT_DIR$/www/scripts/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/build.prop" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/build.prop" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/build.prop" afterPath="$PROJECT_DIR$/platforms/android/ant-build/build.prop" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/teams/cards.html" afterPath="$PROJECT_DIR$/app/views/teams/cards.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/views/teams/cards.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/views/teams/cards.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/views/teams/cards.html" afterPath="$PROJECT_DIR$/www/views/teams/cards.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/views/sets/characters.html" afterPath="$PROJECT_DIR$/platforms/ios/www/views/sets/characters.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/Prep Area/config.xml" afterPath="$PROJECT_DIR$/platforms/ios/Prep Area/config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/cordova/console.log" afterPath="$PROJECT_DIR$/platforms/ios/cordova/console.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/views/sets/details.html" afterPath="$PROJECT_DIR$/platforms/ios/www/views/sets/details.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/index.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/index.html" afterPath="$PROJECT_DIR$/platforms/ios/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/styles/main.css" afterPath="$PROJECT_DIR$/platforms/ios/www/styles/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/sets/characters.html" afterPath="$PROJECT_DIR$/app/views/sets/characters.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/views/sets/characters.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/views/sets/characters.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/views/sets/characters.html" afterPath="$PROJECT_DIR$/www/views/sets/characters.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/collection.js" afterPath="$PROJECT_DIR$/app/scripts/collection.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/scripts/collection.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/scripts/collection.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/scripts/collection.js" afterPath="$PROJECT_DIR$/www/scripts/collection.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/views/teams/edit.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/views/teams/edit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/views/teams/edit.html" afterPath="$PROJECT_DIR$/www/views/teams/edit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/main.css" afterPath="$PROJECT_DIR$/app/styles/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/styles/main.css" afterPath="$PROJECT_DIR$/platforms/android/assets/www/styles/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/styles/main.css" afterPath="$PROJECT_DIR$/www/styles/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/services/providers.js" afterPath="$PROJECT_DIR$/app/scripts/services/providers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/scripts/services/providers.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/scripts/services/providers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/scripts/services/providers.js" afterPath="$PROJECT_DIR$/platforms/ios/www/scripts/services/providers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/scripts/services/providers.js" afterPath="$PROJECT_DIR$/www/scripts/services/providers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/views/sets/sets.html" afterPath="$PROJECT_DIR$/platforms/ios/www/views/sets/sets.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/teams/show.html" afterPath="$PROJECT_DIR$/app/views/teams/show.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/views/teams/show.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/views/teams/show.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/views/teams/show.html" afterPath="$PROJECT_DIR$/www/views/teams/show.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/teams/teams.html" afterPath="$PROJECT_DIR$/app/views/teams/teams.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/views/teams/teams.html" afterPath="$PROJECT_DIR$/www/views/teams/teams.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/teams.js" afterPath="$PROJECT_DIR$/app/scripts/teams.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/scripts/teams.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/scripts/teams.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/scripts/teams.js" afterPath="$PROJECT_DIR$/www/scripts/teams.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -115,22 +60,44 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
+          <file leaf-file-name="sets.html" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/views/sets/sets.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="1473" max-vertical-offset="2550">
-                  <caret line="123" column="50" selection-start-line="123" selection-start-column="50" selection-end-line="123" selection-end-column="50" />
+                <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="270">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="cards.html" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/views/teams/cards.html">
+          <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="465">
-                  <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.5576208" vertical-offset="1995" max-vertical-offset="2685">
+                  <caret line="153" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="details.html" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/views/sets/details.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="1410">
+                  <caret line="13" column="10" selection-start-line="0" selection-start-column="0" selection-end-line="88" selection-end-column="11" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="basic.html" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/views/sets/basic.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-12.75" vertical-offset="519" max-vertical-offset="1020">
+                  <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+                  <folding>
+                    <element signature="n#style#0;n#h2#0;n#div#0;n#div#3;n#div#1;n#div#0;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -138,8 +105,8 @@
           <file leaf-file-name="collection.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/scripts/collection.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2205">
-                  <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2910">
+                  <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
                   <folding />
                 </state>
               </provider>
@@ -165,11 +132,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="providers.js" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="providers.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/scripts/services/providers.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.6569343" vertical-offset="0" max-vertical-offset="8115">
-                  <caret line="24" column="80" selection-start-line="24" selection-start-column="80" selection-end-line="24" selection-end-column="80" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="9480">
+                  <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/styles/main.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+                  <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
                   <folding />
                 </state>
               </provider>
@@ -179,11 +156,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="characters.html" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="characters.html" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/views/sets/characters.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="270">
-                  <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.3721374" vertical-offset="0" max-vertical-offset="524">
+                  <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
                   <folding />
                 </state>
               </provider>
@@ -192,19 +169,20 @@
           <file leaf-file-name="show.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/views/teams/show.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1080">
-                  <caret line="0" column="57" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="57" />
+                <state vertical-scroll-proportion="-20.583334" vertical-offset="991" max-vertical-offset="1650">
+                  <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
                   <folding>
                     <element signature="n#style#0;n#h2#0;n#div#0;n#div#3;n#div#1;n#div#1;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#h2#0;n#div#0;n#div#3;n#div#1;n#div#2;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="edit.html" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="edit.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/views/teams/edit.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
+                <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="720">
                   <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
                   <folding />
                 </state>
@@ -214,8 +192,8 @@
           <file leaf-file-name="teams.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/views/teams/teams.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="495">
-                  <caret line="0" column="47" selection-start-line="0" selection-start-column="47" selection-end-line="0" selection-end-column="47" />
+                <state vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="495">
+                  <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
                   <folding />
                 </state>
               </provider>
@@ -224,8 +202,18 @@
           <file leaf-file-name="teams.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/scripts/teams.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1740">
-                  <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="354" max-vertical-offset="1920">
+                  <caret line="48" column="34" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="cards.html" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/views/teams/cards.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="555">
+                  <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
                   <folding />
                 </state>
               </provider>
@@ -269,26 +257,27 @@
         <option value="$PROJECT_DIR$/platforms/android/src/com/sleepunit/preparea/HelloCordova.java" />
         <option value="$PROJECT_DIR$/platforms/android/src/com/sleepunit/preparea/PrepArea.java" />
         <option value="$PROJECT_DIR$/app/tabs.html" />
-        <option value="$PROJECT_DIR$/app/views/sets/characters.html" />
         <option value="$PROJECT_DIR$/app/views/sets/details.html" />
         <option value="$PROJECT_DIR$/app/views/tabs.html" />
         <option value="$PROJECT_DIR$/www/views/teams/show.html" />
-        <option value="$PROJECT_DIR$/app/styles/main.css" />
         <option value="$PROJECT_DIR$/app/scripts/filters/formatters.js" />
-        <option value="$PROJECT_DIR$/app/scripts/collection.js" />
         <option value="$PROJECT_DIR$/app/views/sets/sets.html" />
         <option value="$PROJECT_DIR$/config.xml" />
         <option value="$PROJECT_DIR$/platforms/android/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/app/index.html" />
-        <option value="$PROJECT_DIR$/app/views/teams/show.html" />
-        <option value="$PROJECT_DIR$/app/scripts/app.js" />
-        <option value="$PROJECT_DIR$/app/views/teams/cards.html" />
         <option value="$PROJECT_DIR$/app/views/teams/dice.html" />
-        <option value="$PROJECT_DIR$/app/scripts/teams.js" />
-        <option value="$PROJECT_DIR$/app/scripts/services/providers.js" />
         <option value="$PROJECT_DIR$/app/views/teams/teams.html" />
         <option value="$PROJECT_DIR$/app/views/teams/edit.html" />
+        <option value="$PROJECT_DIR$/app/views/teams/cards.html" />
+        <option value="$PROJECT_DIR$/app/styles/main.css" />
+        <option value="$PROJECT_DIR$/app/scripts/teams.js" />
+        <option value="$PROJECT_DIR$/app/views/teams/show.html" />
+        <option value="$PROJECT_DIR$/app/views/sets/characters.html" />
+        <option value="$PROJECT_DIR$/app/views/sets/basic.html" />
+        <option value="$PROJECT_DIR$/app/scripts/collection.js" />
+        <option value="$PROJECT_DIR$/app/scripts/services/providers.js" />
+        <option value="$PROJECT_DIR$/app/scripts/app.js" />
       </list>
     </option>
   </component>
@@ -522,6 +511,28 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="views">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="sets">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="preparea">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="scripts">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
@@ -666,7 +677,11 @@
       <created>1401226452578</created>
       <updated>1401226452578</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Split complex team edit view into multiple pages. Hand holding navigation back button for edit workflow since it really doesn't make sense in the traditional way.&#10;&#10;Moved all team logic into a factory.">
+      <created>1401288458249</created>
+      <updated>1401288458249</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -679,7 +694,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40203047" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10520833" sideWeight="0.50254667" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.10520833" sideWeight="0.50254667" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -736,7 +751,8 @@
     </option>
     <MESSAGE value="Incremented Android version for next release.&#10;&#10;Split collection and team code into separate files.&#10;&#10;Initial team building code" />
     <MESSAGE value="Was missing module inclusion for split out team file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Was missing module inclusion for split out team file" />
+    <MESSAGE value="Split complex team edit view into multiple pages. Hand holding navigation back button for edit workflow since it really doesn't make sense in the traditional way.&#10;&#10;Moved all team logic into a factory." />
+    <option name="LAST_COMMIT_MESSAGE" value="Split complex team edit view into multiple pages. Hand holding navigation back button for edit workflow since it really doesn't make sense in the traditional way.&#10;&#10;Moved all team logic into a factory." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -744,14 +760,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ionic.project">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="165">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="4605">
@@ -1000,45 +1008,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41777188" vertical-offset="0" max-vertical-offset="754">
-          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tabs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="255">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.7325703" vertical-offset="0" max-vertical-offset="2115">
           <caret line="111" column="17" selection-start-line="111" selection-start-column="17" selection-end-line="111" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/sets/details.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2824675" vertical-offset="0" max-vertical-offset="1410">
-          <caret line="79" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#h2#0;n#div#0;n#div#3;n#div#1;n#div#1;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/sets/sets.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19210246" vertical-offset="0" max-vertical-offset="937">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1051,34 +1024,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
+    <entry file="file://$PROJECT_DIR$/platforms/android/assets/www/views/teams/edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1473" max-vertical-offset="2550">
-          <caret line="123" column="50" selection-start-line="123" selection-start-column="50" selection-end-line="123" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/collection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2205">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/teams/cards.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="465">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/sets/characters.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="270">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.47486034" vertical-offset="0" max-vertical-offset="720">
+          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -1091,36 +1040,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/teams.js">
+    <entry file="file://$PROJECT_DIR$/app/views/tabs.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1740">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="255">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/teams/show.html">
+    <entry file="file://$PROJECT_DIR$/app/styles/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1080">
-          <caret line="0" column="57" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="57" />
-          <folding>
-            <element signature="n#style#0;n#h2#0;n#div#0;n#div#3;n#div#1;n#div#1;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/teams/teams.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="920">
-          <caret line="0" column="47" selection-start-line="0" selection-start-column="47" selection-end-line="0" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platforms/android/assets/www/views/teams/edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47486034" vertical-offset="0" max-vertical-offset="720">
-          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -1133,10 +1064,95 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/teams/teams.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="495">
+          <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/teams/cards.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="555">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/teams.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="354" max-vertical-offset="1920">
+          <caret line="48" column="34" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/sets/sets.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="537">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/teams/show.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.583334" vertical-offset="991" max-vertical-offset="1650">
+          <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#3;n#div#1;n#div#1;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#3;n#div#1;n#div#2;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/sets/details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="1410">
+          <caret line="13" column="10" selection-start-line="0" selection-start-column="0" selection-end-line="88" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/sets/basic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.75" vertical-offset="519" max-vertical-offset="1020">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#3;n#div#1;n#div#0;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/collection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2910">
+          <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/services/providers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6569343" vertical-offset="0" max-vertical-offset="8115">
-          <caret line="24" column="80" selection-start-line="24" selection-start-column="80" selection-end-line="24" selection-end-column="80" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="9480">
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/sets/characters.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3721374" vertical-offset="0" max-vertical-offset="524">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5576208" vertical-offset="1995" max-vertical-offset="2685">
+          <caret line="153" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
           <folding />
         </state>
       </provider>
