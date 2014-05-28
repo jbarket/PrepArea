@@ -1,3 +1,26 @@
-<ion-view title="Team Cards">
+<ion-view title="{{ team.name }}" hide-back-button="true">
+    <ion-nav-buttons side="right">
+        <button class="button button-dark" ng-click="cardsCtrl.finish()">
+            Finish
+        </button>
+    </ion-nav-buttons>
+
+    <ion-content>
+        <ion-list>
+
+            <div ng-repeat="character in cardsCtrl.characters">
+
+                <div class="item item-divider">{{ character.name }}</div>
+
+                <ion-checkbox class="item-icon-right" ng-repeat="card in character.cards | orderBy:raritySort" ng-model="team.set_cards[card.set + '-' + card.number]">
+                    {{ card.name }} (#{{ card.number | numberFixedLen:3 }})
+                    <i class="icon ion-minus card_{{ card.rarity }}"></i>
+                </ion-checkbox>
+
+            </div>
+
+        </ion-list>
+
+    </ion-content>
 
 </ion-view>

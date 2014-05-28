@@ -1,0 +1,143 @@
+<ion-view title="{{ team.name }}">
+    <ion-nav-buttons side="right">
+        <button class="button button-dark"  ng-show="showCtrl.isShow" ng-click="showCtrl.enableEditing()">
+            Edit
+        </button>
+        <button class="button button-dark"  ng-show="showCtrl.isEditing" ng-click="showCtrl.finishEditing()">
+            Finish
+        </button>
+        <button class="button button-dark"  ng-show="showCtrl.isManagingCards" ng-click="showCtrl.finishCards()">
+            Finish
+        </button>
+        <button class="button button-dark"  ng-show="showCtrl.isManagingDice" ng-click="showCtrl.finishDice()">
+            Finish
+        </button>
+    </ion-nav-buttons>
+
+    <ion-content>
+        <div ng-show="showCtrl.isShow">
+
+            <div ng-show="showCtrl.teamCards().length === 0">
+                <div class="card">
+                    <div class="item item-text-wrap">
+                        <p>You have no cards on this team. Click the Edit button to begin adding cards and dice.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" ng-repeat="card in showCtrl.teamCards() | orderBy:'character'">
+                <div class="item item-text-wrap">
+                    <h2>{{ card.character}} &mdash; {{ card.name }} (#{{ card.number | numberFixedLen:3 }})</h2>
+                    <p>
+                        {{ card.cost }} {{ card.cost_type }}
+                        <span ng-show="card.affiliation"> / {{ card.affiliation }}</span>
+                    </p>
+                    <span class="badge badge-dark">{{ team.dice[card.set + '-' + card.number] || 0 }}</span>
+                </div>
+                <div class="item item-text-wrap item-icon-right">
+                    <i class="icon ion-minus card_{{ card.rarity }}"></i>
+
+                    <div class="row">
+                        <div class="col">
+                            <p>{{ card.ability }}</p>
+                        </div>
+                    </div>
+
+                    <div class="row" ng-show="card.ability_burst">
+                        <div class="col col-20"><h1>*</h1></div>
+                        <div class="col col-80">
+                            <p>{{ card.ability_burst }}</p>
+                        </div>
+                    </div>
+
+                    <div class="row" ng-show="card.ability_double_burst">
+                        <div class="col col-20"><h1>**</h1></div>
+                        <div class="col col-80">
+                            <p>{{ card.ability_double_burst }}</p>
+                        </div>
+                    </div>
+
+                    <div class="row global" ng-show="card.ability_global">
+                        <div class="col col-20"><h2 style="color: maroon;">G</h2></div>
+                        <div class="col col-80">
+                            <p>{{ card.ability_global }}</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <br ng-hide="showCtrl.isEditing" />
+
+        </div>
+
+        <ion-list ng-show="showCtrl.isEditing">
+            <div class="card">
+                <label class="item item-input">
+                    <span class="input-label">Name</span>
+                    <input type="text" ng-model="team.name">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Total Cards</span>
+                    {{ showCtrl.totalCards() }}
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Total Dice</span>
+                    {{ showCtrl.totalDice() }}
+                </label>
+            </div>
+
+            <div class="padding">
+                <button class="button button-block button-dark" ng-click="showCtrl.enableCards()">
+                    Manage Team Cards
+                </button>
+            </div>
+
+            <div class="padding">
+                <button class="button button-block button-dark" ng-click="showCtrl.enableDice()">
+                    Manage Team Dice
+                </button>
+            </div>
+
+
+        </ion-list>
+
+        <ion-list ng-show="showCtrl.isManagingCards">
+
+            <div ng-repeat="character in showCtrl.characters">
+
+                <div class="item item-divider">{{ character.name }}</div>
+
+                <ion-checkbox class="item-icon-right" ng-repeat="card in character.cards | orderBy:raritySort" ng-model="team.set_cards[card.set + '-' + card.number]">
+                    {{ card.name }} (#{{ card.number | numberFixedLen:3 }})
+                    <i class="icon ion-minus card_{{ card.rarity }}"></i>
+                </ion-checkbox>
+
+            </div>
+
+        </ion-list>
+
+        <ion-list ng-show="showCtrl.isManagingDice">
+
+            <div class="card" ng-repeat="card in showCtrl.teamCards() | orderBy:'character'">
+
+                <div class="item item-divider">{{ card.character }} &mdash; {{ card.name }} (#{{ card.number | numberFixedLen:3 }})</div>
+                <div class="item">
+                    <div class="row">
+                        <div class="col col-20">
+                            <h1>{{ team.dice[card.set + '-' + card.number] || 0 }}</h1>
+                        </div>
+                        <div class="col col-offset-50 col-30">
+                            <button class="button button-dark" ng-click="showCtrl.addDie(card.set + '-' + card.number)">+</button>
+                            <button class="button button-dark" ng-click="showCtrl.removeDie(card.set + '-' + card.number)">-</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </ion-list>
+
+
+    </ion-content>
+
+</ion-view>

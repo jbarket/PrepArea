@@ -1,4 +1,4 @@
-<ion-view title="Teams">
+<ion-view title="Teams" hide-back-button="true">
     <ion-nav-buttons side="left">
         <button class="button button-icon icon ion-ios7-minus-outline" ng-click="teamsCtrl.toggleDelete()"></button>
     </ion-nav-buttons>
@@ -13,7 +13,7 @@
             <ion-item ng-repeat="team in teams">
                 <ion-delete-button class="ion-minus-circled" ng-click="teamsCtrl.deleteTeam(team)"></ion-delete-button>
 
-                <div ui-sref="tabs.show({ teamIndex: $index })">
+                <div ui-sref="tabs.show({ uuid: team.uuid })">
                     {{ team.name }}
                     <span class="item-note">
                         {{ teamsCtrl.totalCards(team) }} Cards / {{ teamsCtrl.totalDice(team) }} Dice

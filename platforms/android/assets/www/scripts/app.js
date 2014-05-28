@@ -1,6 +1,12 @@
-angular.module('app', ['collection', 'ionic', 'ui.router', 'LocalForageModule',
+angular.module('app', ['teams', 'collection', 'ionic', 'ui.router', 'LocalForageModule',
     'providers', 'formatters'])
-
+    .run(['$ionicPlatform',
+        function($ionicPlatform) {
+//            $ionicPlatform.ready(function() {
+//                analytics.startTrackerWithId('UA-51386708-1');
+//            });
+        }
+    ])
     .config(function($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise("/tab/sets");
 
@@ -48,11 +54,38 @@ angular.module('app', ['collection', 'ionic', 'ui.router', 'LocalForageModule',
 
             })
             .state('tabs.show', {
-                url: '/teams/show/:teamIndex?isNew',
+                url: '/teams/show/:uuid',
                 views: {
                     'teams-tab': {
                         templateUrl: 'views/teams/show.html',
                         controller: 'ShowCtrl as showCtrl'
+                    }
+                }
+            })
+            .state('tabs.edit', {
+                url: '/teams/edit/:uuid',
+                views: {
+                    'teams-tab': {
+                        templateUrl: 'views/teams/edit.html',
+                        controller: 'EditCtrl as editCtrl'
+                    }
+                }
+            })
+            .state('tabs.cards', {
+                url: '/teams/cards/:uuid',
+                views: {
+                    'teams-tab': {
+                        templateUrl: 'views/teams/cards.html',
+                        controller: 'CardsCtrl as cardsCtrl'
+                    }
+                }
+            })
+            .state('tabs.dice', {
+                url: '/teams/dice/:uuid',
+                views: {
+                    'teams-tab': {
+                        templateUrl: 'views/teams/dice.html',
+                        controller: 'DiceCtrl as diceCtrl'
                     }
                 }
             });
@@ -83,15 +116,19 @@ angular.module('app', ['collection', 'ionic', 'ui.router', 'LocalForageModule',
                 }
             });
 
+
             $localForage.get('teams').then(function(data) {
                 if (data) {
+                    console.log("[LF] Found existing Team data.");
                     $rootScope.teams = data;
+                    console.log($rootScope.teams);
                 }
                 else {
+                    console.log("[LF] No Team data found. Initializing.");
                     $rootScope.teams = [];
                 }
-            });
 
+            });
 
             $rootScope.$watch('owned', function() {
                 if ($rootScope.owned !== undefined) {
@@ -101,6 +138,7 @@ angular.module('app', ['collection', 'ionic', 'ui.router', 'LocalForageModule',
 
             $rootScope.$watch('teams', function() {
                 if ($rootScope.teams !== undefined) {
+                    console.log("[LF] Team change detected. Persisting.");
                     $localForage.setItem('teams', $rootScope.teams);
                 }
             }, true);

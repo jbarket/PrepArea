@@ -1,8 +1,7 @@
 angular.module('teams', ['collection', 'ionic', 'ui.router', 'LocalForageModule', 'providers', 'formatters'])
 
-    .controller('TeamsCtrl', ['$scope', '$state', '$ionicPopup',
-        function ($scope, $state, $ionicPopup) {
-
+    .controller('TeamsCtrl', ['$scope', '$state', '$ionicPopup', 'Teams',
+        function ($scope, $state, $ionicPopup, Teams) {
 
             this.showDelete = false;
             this.showReorder = false;
@@ -13,10 +12,8 @@ angular.module('teams', ['collection', 'ionic', 'ui.router', 'LocalForageModule'
             };
 
             this.addTeam = function () {
-                var team = { name: "New Team", set_cards: {}, dice: {} };
-                $scope.teams.push(team);
-                var team_index = $scope.teams.indexOf(team);
-                $state.go('tabs.show', { teamIndex: team_index, isNew: true });
+                var uuid = Teams.new();
+                $state.go('tabs.edit', { uuid: uuid });
             };
 
             this.deleteTeam = function (team) {
@@ -26,180 +23,88 @@ angular.module('teams', ['collection', 'ionic', 'ui.router', 'LocalForageModule'
                 });
 
                 confirmPopup.then(function(res) {
-                    if(res) {
-                        $scope.teams.splice($scope.teams.indexOf(team), 1);
-                    } else {
+                    if (res) {
+                        Teams.remove(team);
                     }
                 });
 
             };
 
-
-
             this.totalCards = function (team) {
-                total = 0;
-
-                angular.forEach(team.set_cards, function (value, set_card) {
-                    if (value) {
-                        total++;
-                    }
-                });
-
-                return total;
+                return Teams.totalCards(team);
             };
 
             this.totalDice = function (team) {
-                var total = 0;
-
-                angular.forEach(team.set_cards, function (value, set_card) {
-                    if (value) {
-                        var dice = team.dice[set_card];
-
-                        if (dice) {
-                            total += dice;
-                        }
-                    }
-                });
-
-                return total;
+                return Teams.totalDice(team);
             };
 
         }
     ])
-    .controller('ShowCtrl', ['$scope', '$stateParams', '$ionicScrollDelegate', 'Sets',
-        function($scope, $stateParams, $ionicScrollDelegate, Sets) {
+    .controller('ShowCtrl', ['$scope', '$stateParams', 'Teams', 'Sets',
+        function($scope, $stateParams, Teams, Sets) {
 
-            this.team_index = $stateParams.teamIndex;
-            $scope.team = $scope.teams[$stateParams.teamIndex];
-            this.characters = Sets.characterCards();
-
-            this.isShow = true;
-            this.isEditing = false;
-            this.isManagingCards = false;
-            this.isManagingDice = false;
+            $scope.team = Teams.find($stateParams.uuid);
 
             this.teamCards = function () {
-                var cards = [];
-
-                angular.forEach($scope.team.set_cards, function (value, set_card) {
-
-                    if (value) {
-                        // split at last -
-                        var n = set_card.lastIndexOf('-');
-                        var cardNumber = set_card.substring(n + 1);
-                        var setName = set_card.substring(0, n);
-                        var card = Sets.findCardBySetAndNumber(setName, cardNumber);
-
-                        if (card)
-                            cards.push(card);
-                    }
-                });
-
-                return cards;
+                return Teams.teamCards($scope.team);
             };
 
-            this.enableEditing = function () {
-                this.isShow = false;
-                this.isManagingCards = false;
-                this.isManagingDice = false;
-                this.isEditing = true;
-                $ionicScrollDelegate.scrollTop();
-            };
+        }
+    ])
+    .controller('EditCtrl', ['$scope', '$stateParams', '$state', 'Teams',
+        function($scope, $stateParams, $state, Teams) {
 
-            this.enableCards = function () {
-                this.isEditing = false;
-                this.isShow = false;
-                this.isManagingDice = false;
-                this.isManagingCards = true;
-                $ionicScrollDelegate.scrollTop();
-            };
+            $scope.team = Teams.find($stateParams.uuid);
 
-            this.enableDice = function () {
-                this.isEditing = false;
-                this.isShow = false;
-                this.isManagingCards = false;
-                this.isManagingDice = true;
-                $ionicScrollDelegate.scrollTop();
-            };
-
-            this.finishEditing = function () {
-                this.isEditing = false;
-                this.isManagingCards = false;
-                this.isManagingDice = false;
-                this.isShow = true;
-                $ionicScrollDelegate.scrollTop();
-            };
-
-            this.finishCards = function () {
-                this.isShow = false;
-                this.isManagingCards = false;
-                this.isManagingDice = false;
-                this.isEditing = true;
-                $ionicScrollDelegate.scrollTop();
-            };
-
-            this.finishDice = function () {
-                this.isShow = false;
-                this.isManagingCards = false;
-                this.isManagingDice = false;
-                this.isEditing = true;
-                $ionicScrollDelegate.scrollTop();
+            this.finish = function () {
+                $state.go('tabs.show', { uuid: $scope.team.uuid });
             };
 
             this.totalCards = function () {
-                total = 0;
-
-                angular.forEach($scope.team.set_cards, function (value, set_card) {
-                    if (value) {
-                        total++;
-                    }
-                });
-
-                return total;
+                return Teams.totalCards($scope.team);
             };
 
             this.totalDice = function () {
-                var total = 0;
-
-                angular.forEach($scope.team.set_cards, function (value, set_card) {
-                    if (value) {
-                        var dice = $scope.team.dice[set_card];
-
-                        if (dice) {
-                            total += dice;
-                        }
-                    }
-                });
-
-                return total;
+                return Teams.totalDice($scope.team);
             };
 
-            this.addDie = function (natural_key) {
-                if (!$scope.team.dice[natural_key]) {
-                    $scope.team.dice[natural_key] = 1;
-                }
-                else {
-                    $scope.team.dice[natural_key]++;
-                }
+        }
+    ])
+    .controller('CardsCtrl', ['$scope', '$stateParams', '$state', 'Sets', 'Teams',
+        function($scope, $stateParams, $state, Sets, Teams) {
 
+            $scope.team = Teams.find($stateParams.uuid);
+            this.characters = Sets.characterCards();
+
+            this.finish = function () {
+                $state.go('tabs.edit', { uuid: $scope.team.uuid });
             };
 
-            this.removeDie = function (natural_key) {
-                if (!$scope.team.dice[natural_key]) {
-                    $scope.team.dice[natural_key] = 0;
-                }
-                else if ($scope.team.dice[natural_key] > 0) {
-                    $scope.team.dice[natural_key]--;
-                }
+        }
+    ])
+    .controller('DiceCtrl', ['$scope', '$stateParams', '$state', 'Teams',
+        function($scope, $stateParams, $state, Teams) {
 
+            $scope.team = Teams.find($stateParams.uuid);
+
+            this.finish = function () {
+                $state.go('tabs.edit', { uuid: $scope.team.uuid });
             };
 
-            if (!this.isNew && $stateParams.isNew) {
-                this.enableEditing();
-                this.isNew = false;
-            }
+            this.teamCards = function () {
+                return Teams.teamCards($scope.team);
+            };
+
+            this.addDie = function (card) {
+                Teams.addDie($scope.team, card);
+            };
+
+            this.removeDie = function (card) {
+                Teams.removeDie($scope.team, card);
+            };
 
         }
     ]);
+
 
 
