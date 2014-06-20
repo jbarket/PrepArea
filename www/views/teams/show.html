@@ -1,104 +1,77 @@
-<ion-view title="{{ team.name }}" hide-back-button="true">
-    <ion-nav-buttons side="left">
-        <a class="button button-icon ion-arrow-left-c" ui-sref="tabs.teams"></a>
-    </ion-nav-buttons>
+<ion-view title="{{ showCtrl.team.name }}">
     <ion-nav-buttons side="right">
-        <a class="button button-dark" ui-sref="tabs.edit({ teamIndex: showCtrl.team_index })">
+        <a class="button button-dark" ui-sref="tabs.team_edit({ id: showCtrl.team._id })">
             Edit
         </a>
     </ion-nav-buttons>
 
+    <ion-header-bar class="bar-subheader">
+        <div class="team-stats">
+            {{ showCtrl.basicCount(showCtrl.team) }} Basic Actions &middot;
+            {{ showCtrl.cardCount(showCtrl.team) }} Cards &middot;
+            {{ showCtrl.diceCount(showCtrl.team) }} Dice
+        </div>
+
+    </ion-header-bar>
+
+
     <ion-content>
+        <ion-list>
 
-        <div ng-show="showCtrl.teamCards().length === 0">
-            <div class="card">
-                <div class="item item-text-wrap">
-                    <p>You have no character cards on this team. Click the Edit button to begin adding cards and dice.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="card" ng-repeat="card in showCtrl.teamCards() | orderBy:'character'">
-            <div class="item item-text-wrap">
-                <h2>{{ card.character}} &mdash; {{ card.name }} (#{{ card.number | numberFixedLen:3 }})</h2>
-                <p>
-                    {{ card.cost }} {{ card.cost_type }}
-                    <span ng-show="card.affiliation"> / {{ card.affiliation }}</span>
-                </p>
-                <span class="badge badge-dark">{{ team.dice[card.set + '-' + card.number] || 0 }}</span>
-            </div>
-            <div class="item item-text-wrap item-icon-right">
-                <i class="icon ion-minus card_{{ card.rarity }}"></i>
-
-                <div class="row">
-                    <div class="col">
-                        <p>{{ card.ability }}</p>
-                    </div>
-                </div>
-
-                <div class="row" ng-show="card.ability_burst">
-                    <div class="col col-20"><h1>*</h1></div>
-                    <div class="col col-80">
-                        <p>{{ card.ability_burst }}</p>
-                    </div>
-                </div>
-
-                <div class="row" ng-show="card.ability_double_burst">
-                    <div class="col col-20"><h1>**</h1></div>
-                    <div class="col col-80">
-                        <p>{{ card.ability_double_burst }}</p>
-                    </div>
-                </div>
-
-                <div class="row global" ng-show="card.ability_global">
-                    <div class="col col-20"><h2 style="color: maroon;">G</h2></div>
-                    <div class="col col-80">
-                        <p>{{ card.ability_global }}</p>
-                    </div>
-                </div>
+            <div class="item item-divider"
+                 ng-repeat-start="card_group in showCtrl.card_groups"
+                 bindonce>
+                {{ card_group.key[1] }}
             </div>
 
-        </div>
+            <div class="item item-icon-left item-{{ card.type }}"
+                 ng-class="{
+                    'item-icon-right': showCtrl.team.set_cards[card.type + '-' + card._id] && card.type === 'basic'
+                 }"
+                 ng-show="showCtrl.team.set_cards[card.type + '-' + card._id]"
+                 ng-repeat="card in card_group.doc.cards | orderBy: raritySort"
+                 bindonce>
+                <i class="icon ion-stop card_{{ card.rarity }}"></i>
 
-        <div class="card" ng-repeat="card in showCtrl.basicCards() | orderBy:'character'">
-            <div class="item item-text-wrap">
-                <h2>{{ card.name }} (#{{ card.number | numberFixedLen:3 }})</h2>
-                <p>{{ card.cost }}</p>
+                <div ui-sref="tabs.team_card_art({ id: card._id })">
+                    {{ card.name }} <small>&middot; #{{ card.number | numberFixedLen:3 }}</small>
+
+                    <div ng-show="card.type === 'card'">
+                        <small>
+                            {{ card.cost }} {{ card.cost_type }}
+                            <span ng-show="card.affiliation">
+                                &mdash;
+                                {{ card.affiliation }}
+                            </span>
+                        </small>
+                    </div>
+
+                </div>
+
+                <span class="badge"
+                      ng-show="showCtrl.team.set_cards[card.type + '-' + card._id] && card.type !== 'basic'"
+                      ng-class="{
+                        'badge-energized': owned['cards-' + card._id] && owned['cards-' + card._id] > card.die_limit,
+                        'badge-balanced': showCtrl.team.dice[card._id] && showCtrl.team.dice[card._id] > 0 && showCtrl.team.dice[card._id] <= card.die_limit,
+                        'badge-dark': !showCtrl.team.dice[card._id] || showCtrl.team.dice[card._id] === 0,
+
+                        }">
+                      {{ showCtrl.team.dice[card._id] || 0 }}
+                </span>
+
+                <i ng-show="showCtrl.team.set_cards[card.type + '-' + card._id] && card.type === 'basic'"
+                   ng-class="{
+                         'ion-ios7-checkmark balanced': showCtrl.team.set_cards[card.type + '-' + card._id] && card.type === 'basic'
+                   }"
+                   class="icon"
+                   ng-click="showTeamCardModal(card)"></i>
+
             </div>
-            <div class="item item-text-wrap item-icon-right">
-                <i class="icon ion-minus card_{{ card.rarity }}"></i>
 
-                <div class="row">
-                    <div class="col">
-                        <p>{{ card.ability }}</p>
-                    </div>
-                </div>
+            <div ng-repeat-end></div>
 
-                <div class="row" ng-show="card.ability_burst">
-                    <div class="col col-20"><h1>*</h1></div>
-                    <div class="col col-80">
-                        <p>{{ card.ability_burst }}</p>
-                    </div>
-                </div>
 
-                <div class="row" ng-show="card.ability_double_burst">
-                    <div class="col col-20"><h1>**</h1></div>
-                    <div class="col col-80">
-                        <p>{{ card.ability_double_burst }}</p>
-                    </div>
-                </div>
-
-                <div class="row global" ng-show="card.ability_global">
-                    <div class="col col-20"><h2 style="color: maroon;">G</h2></div>
-                    <div class="col col-80">
-                        <p>{{ card.ability_global }}</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <br />
+        </ion-list>
 
     </ion-content>
 

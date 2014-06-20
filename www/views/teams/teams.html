@@ -1,24 +1,29 @@
-<ion-view title="Teams" hide-back-button="true">
+<ion-view title="Teams">
     <ion-nav-buttons side="left">
         <button class="button button-icon icon ion-ios7-minus-outline" ng-click="teamsCtrl.toggleDelete()"></button>
     </ion-nav-buttons>
     <ion-nav-buttons side="right">
         <button class="button button-dark" ng-click="teamsCtrl.addTeam()">
-            New Team
+            New
         </button>
     </ion-nav-buttons>
     <ion-content>
 
         <ion-list show-delete="teamsCtrl.showDelete">
-            <ion-item ng-repeat="team in teams">
+            <ion-item ng-repeat="team in teamsCtrl.teams track by team.id">
                 <ion-delete-button class="ion-minus-circled" ng-click="teamsCtrl.deleteTeam(team)"></ion-delete-button>
 
-                <div ui-sref="tabs.show({ uuid: team.uuid })">
-                    {{ team.name }}
-                    <span class="item-note">
-                        {{ teamsCtrl.totalCards(team) }} Cards / {{ teamsCtrl.totalDice(team) }} Dice
-                    </span>
+                <div ui-sref="tabs.show({ id: team.id })">
+                    {{ team.doc.name }}
+                    <br />
+
+                    <small>
+                        {{ teamsCtrl.basicCount(team.doc) }} Basic Actions &middot;
+                        {{ teamsCtrl.cardCount(team.doc) }} Cards &middot;
+                        {{ teamsCtrl.diceCount(team.doc) }} Dice
+                    </small>
                 </div>
+
 
             </ion-item>
         </ion-list>

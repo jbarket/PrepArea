@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col">
+        <h1>{{ owned['cards-' + card._id] || 0 }}</h1>
+    </div>
+    <div class="col">
+        <div class="button-bar">
+            <button class="button button-dark" ng-click="addCard(card)">+</button>
+            <button class="button button-dark" ng-click="removeCard(card)">-</button>
+        </div>
+    </div>
+</div>

@@ -14,143 +14,46 @@ angular.module('app', ['teams', 'collection', 'ionic', 'ui.router', 'LocalForage
             .state('tabs', {
                 url: "/tab",
                 abstract: true,
-                templateUrl: "views/tabs.html"
-            })
-            .state('tabs.sets', {
-                url: '/sets',
-                views: {
-                    'collection-tab': {
-                        templateUrl: 'views/sets/sets.html',
-                        controller: 'SetsCtrl as setsCtrl'
-                    }
-                }
-            })
-            .state('tabs.characters', {
-                url: '/characters/:setName',
-                views: {
-                    'collection-tab': {
-                        templateUrl: 'views/sets/characters.html',
-                        controller: 'CharactersCtrl as charactersCtrl'
-                    }
-                }
-            })
-            .state('tabs.basic', {
-                url: '/basics/:setName',
-                views: {
-                    'collection-tab': {
-                        templateUrl: 'views/sets/basic.html',
-                        controller: 'BasicCtrl as basicCtrl'
-                    }
-                }
-            })
-            .state('tabs.details', {
-                url: '/characters/:setName/details/:characterName',
-                views: {
-                    'collection-tab': {
-                        templateUrl: 'views/sets/details.html',
-                        controller: 'DetailsCtrl as detailsCtrl'
-                    }
-                }
-            })
-            .state('tabs.teams', {
-                url: '/teams',
-                views: {
-                    'teams-tab': {
-                        templateUrl: 'views/teams/teams.html',
-                        controller: 'TeamsCtrl as teamsCtrl'
-                    }
-                }
+                controller: "MainCtrl",
+                templateUrl: "views/tabs.html",
+                resolve: {
+                    setup: function ($q, $rootScope, Owned, Sets, LoaderService) {
 
-            })
-            .state('tabs.show', {
-                url: '/teams/show/:uuid',
-                views: {
-                    'teams-tab': {
-                        templateUrl: 'views/teams/show.html',
-                        controller: 'ShowCtrl as showCtrl'
+                        var deferred = $q.defer();
+
+                        LoaderService.show();
+
+                        Owned.setup().then(function () {
+
+                            var setPromise = Sets.all().then(function (data) {
+                                $rootScope.sets = data.rows;
+                            });
+
+                            var ownedPromise = Owned.find().then(function (data) {
+                                $rootScope.owned = data;
+                            });
+
+                            var cardsPromise = Sets.cardsByCharacter().then(function (data) {
+                                $rootScope.card_groups = data.rows;
+                            });
+
+                            $q.all([setPromise, ownedPromise, cardsPromise]).then(function () {
+                                deferred.resolve();
+                                LoaderService.hide();
+                            });
+
+
+                        });
+
+                        return deferred.promise;
                     }
-                }
-            })
-            .state('tabs.edit', {
-                url: '/teams/edit/:uuid',
-                views: {
-                    'teams-tab': {
-                        templateUrl: 'views/teams/edit.html',
-                        controller: 'EditCtrl as editCtrl'
-                    }
-                }
-            })
-            .state('tabs.cards', {
-                url: '/teams/cards/:uuid',
-                views: {
-                    'teams-tab': {
-                        templateUrl: 'views/teams/cards.html',
-                        controller: 'CardsCtrl as cardsCtrl'
-                    }
-                }
-            })
-            .state('tabs.dice', {
-                url: '/teams/dice/:uuid',
-                views: {
-                    'teams-tab': {
-                        templateUrl: 'views/teams/dice.html',
-                        controller: 'DiceCtrl as diceCtrl'
-                    }
+
                 }
             });
     })
-    .controller('MainCtrl', ['$scope', '$rootScope', '$localForage', 'Sets',
-        function ($scope, $rootScope, $localForage, Sets) {
-
-            $localForage.get('owned').then(function(data) {
-                if (data) {
-                    $rootScope.owned = data;
-                    angular.forEach(Sets.all, function(set) {
-                        angular.forEach(set.characters, function (character) {
-                            if (!$scope.owned && $scope.owned[set.name + '-dice' + charcter.name]) {
-                                $scope.owned[set.name + '-dice' + charcter.name] = 0;
-                            }
-                        });
-                    });
-                }
-                else {
-                    $rootScope.owned = {};
-                    angular.forEach(Sets.all, function(set) {
-                        angular.forEach(set.characters, function (character) {
-                            if (!$scope.owned && $scope.owned[set.name + '-dice' + charcter.name]) {
-                                $scope.owned[set.name + '-dice' + charcter.name] = 0;
-                            }
-                        });
-                    });
-                }
-            });
-
-
-            $localForage.get('teams').then(function(data) {
-                if (data) {
-                    console.log("[LF] Found existing Team data.");
-                    $rootScope.teams = data;
-                    console.log($rootScope.teams);
-                }
-                else {
-                    console.log("[LF] No Team data found. Initializing.");
-                    $rootScope.teams = [];
-                }
-
-            });
-
-            $rootScope.$watch('owned', function() {
-                if ($rootScope.owned !== undefined) {
-                    $localForage.setItem('owned', $rootScope.owned);
-                }
-            }, true);
-
-            $rootScope.$watch('teams', function() {
-                if ($rootScope.teams !== undefined) {
-                    console.log("[LF] Team change detected. Persisting.");
-                    $localForage.setItem('teams', $rootScope.teams);
-                }
-            }, true);
+    .controller('MainCtrl', ['$q', '$scope', '$rootScope', 'LoaderService', '$ionicPopup',
+        'Sets', 'Owned',
+        function ($q, $scope, $rootScope, LoaderService, $ionicPopup, Sets, Owned) {
 
             $rootScope.raritySort = function(card) {
                 switch(card.rarity) {
@@ -166,8 +69,122 @@ angular.module('app', ['teams', 'collection', 'ionic', 'ui.router', 'LocalForage
 
             };
 
+            $rootScope.openDiceModal = function (set, character) {
+
+                if (character && character.key[2] === 'character') {
+
+                    $rootScope.modalCharacter = character;
+                    $rootScope.modalSet = set;
+
+                    var diceModal = $ionicPopup.show({
+                        templateUrl: 'views/sets/modal_dice.html',
+                        title: $rootScope.modalCharacter.key[1],
+                        subTitle: "How many dice do you own?",
+                        scope: $rootScope,
+                        buttons: [
+
+                            {
+                                text: '<b>Save</b>',
+                                type: 'button-positive',
+                                onTap: function(e) {
+                                    Owned.save($rootScope.owned);
+                                }
+                            }
+                        ]
+                    });
+
+
+                }
+
+
+            };
+
+            $rootScope.openCardModal = function (card) {
+                $rootScope.card = card;
+
+                var cardModal = $ionicPopup.show({
+                    templateUrl: 'views/sets/modal_card.html',
+                    title: $rootScope.card.name,
+                    subTitle: "How many cards do you own?",
+                    scope: $rootScope,
+                    buttons: [
+
+                        {
+                            text: '<b>Save</b>',
+                            type: 'button-positive',
+                            onTap: function(e) {
+                                Owned.save($rootScope.owned);
+                            }
+                        }
+                    ]
+                });
+
+            };
+
+            $rootScope.addDie = function (set, character) {
+
+                if ($rootScope.owned[set._id + '-dice-' + character.id]) {
+                    $rootScope.owned[set._id + '-dice-' + character.id]++;
+                }
+                else {
+                    $rootScope.owned[set._id + '-dice-' + character.id] = 1;
+                }
+
+            };
+
+            $rootScope.removeDie = function (set, character) {
+
+                if ($rootScope.owned[set._id + '-dice-' + character.id] && $rootScope.owned[set._id + '-dice-' + character.id] > 0) {
+                    $rootScope.owned[set._id + '-dice-' + character.id]--;
+                }
+                else {
+                    $rootScope.owned[set._id + '-dice-' + character.id] = 0;
+                }
+
+            };
+
+            $rootScope.addCard = function (card) {
+
+                if ($rootScope.owned['cards-' + card._id]) {
+                    $rootScope.owned['cards-' + card._id]++;
+                }
+                else {
+                    $rootScope.owned['cards-' + card._id] = 1;
+                }
+
+            };
+
+            $rootScope.removeCard = function (card) {
+
+                if ($rootScope.owned['cards-' + card._id] && $rootScope.owned['cards-' + card._id] > 0) {
+                    $rootScope.owned['cards-' + card._id]--;
+                }
+                else {
+                    $rootScope.owned['cards-' + card._id] = 0;
+                }
+
+            };
+
 
         }
-    ]);
+    ])
+    .factory('LoaderService', function($rootScope, $ionicLoading) {
+
+        return {
+            show : function() {
+
+                $ionicLoading.show({
+
+                    template: '<i class="assertive icon ion-refreshing" style="font-size: 50px;""></i>',
+                    animation: 'fade-in',
+                    showBackdrop: true,
+                    maxWidth: 200
+                });
+            },
+            hide : function(){
+                $ionicLoading.hide();
+            }
+        };
+    });
 
 

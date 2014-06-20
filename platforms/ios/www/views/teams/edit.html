@@ -1,44 +1,78 @@
-<ion-view title="{{ team.name }}" hide-back-button="true">
+<ion-view title="{{ editCtrl.team.name }}">
     <ion-nav-buttons side="right">
-        <button class="button button-dark" ng-click="editCtrl.finish()">
-            Finish
-        </button>
+        <button class="button  button-dark button-small" ng-click="showTeamNameModal()">Rename</button>
     </ion-nav-buttons>
 
+    <ion-header-bar class="bar-subheader">
+        <div class="team-stats">
+            {{ editCtrl.basicCount(editCtrl.team) }} Basic Actions &middot;
+            {{ editCtrl.cardCount(editCtrl.team) }} Cards &middot;
+            {{ editCtrl.diceCount(editCtrl.team) }} Dice
+        </div>
+
+    </ion-header-bar>
+
+
     <ion-content>
-
         <ion-list>
-            <div class="card">
-                <label class="item item-input">
-                    <span class="input-label">Name</span>
-                    <input type="text" ng-model="team.name">
-                </label>
-                <label class="item item-input">
-                    <span class="input-label">Action Cards</span>
-                    {{ editCtrl.basicCards() }}
-                </label>
-                <label class="item item-input">
-                    <span class="input-label">Character Cards</span>
-                    {{ editCtrl.totalCards() }}
-                </label>
-                <label class="item item-input">
-                    <span class="input-label">Character Dice</span>
-                    {{ editCtrl.totalDice() }}
-                </label>
-            </div>
 
-            <div class="padding">
-                <a class="button button-block button-dark" ui-sref="tabs.cards">
-                    Manage Team Cards
-                </a>
-            </div>
+            <div collection-repeat="card in editCtrl.card_groups"
+                 collection-item-width="'100%'"
+                 collection-item-height="getCardHeight(card)"
+                 class="card-item">
 
-            <div class="padding">
-                <a class="button button-block button-dark" ui-sref="tabs.dice">
-                    Manage Team Dice
-                </a>
-            </div>
 
+                <div ng-if="card.doc"
+                     class="item item-divider"
+                     ng-click="openDiceModal(cardListCtrl.set, card)">
+
+                    {{ card.key[1] }}
+
+                </div>
+
+
+            <div ng-if="card.type && (card.type === 'basic' || card.type === 'card')"
+                 class="item item-icon-left item-{{ card.type }}"
+                 ng-class="{
+                    'item-icon-right': !editCtrl.team.set_cards[card.type + '-' + card._id] || (editCtrl.team.set_cards[card.type + '-' + card._id] && card.type === 'basic')
+                 }">
+
+                <i class="icon ion-stop card_{{ card.rarity }}"></i>
+
+                <div ui-sref="tabs.team_card_art({ id: card._id })">
+                    {{ card.name }} <small>&middot; #{{ card.number | numberFixedLen:3 }}</small>
+
+                    <div ng-show="card.type === 'card'">
+                        <small>
+                            {{ card.cost }} {{ card.cost_type }}
+                            <span ng-show="card.affiliation">
+                                &mdash;
+                                {{ card.affiliation }}
+                            </span>
+                        </small>
+                    </div>
+                </div>
+
+                <span class="badge"
+                      ng-show="editCtrl.team.set_cards[card.type + '-' + card._id] && card.type !== 'basic'"
+                      ng-class="{
+                        'badge-energized': owned['cards-' + card._id] && owned['cards-' + card._id] > card.die_limit,
+                        'badge-balanced': editCtrl.team.dice[card._id] && editCtrl.team.dice[card._id] > 0 && editCtrl.team.dice[card._id] <= card.die_limit,
+                        'badge-dark': !editCtrl.team.dice[card._id] || editCtrl.team.dice[card._id] === 0
+                      }"
+                      ng-click="showTeamCardModal(card)">
+                      {{ editCtrl.team.dice[card._id] || 0 }}
+                </span>
+
+                <i ng-show="!editCtrl.team.set_cards[card.type + '-' + card._id] || (editCtrl.team.set_cards[card.type + '-' + card._id] && card.type === 'basic')"
+                   ng-class="{
+                         'ion-plus-circled': !editCtrl.team.set_cards[card.type + '-' + card._id],
+                         'ion-ios7-checkmark balanced': editCtrl.team.set_cards[card.type + '-' + card._id] && card.type === 'basic'
+                   }"
+                   class="icon"
+                   ng-click="showTeamCardModal(card)"></i>
+
+            </div>
 
         </ion-list>
 

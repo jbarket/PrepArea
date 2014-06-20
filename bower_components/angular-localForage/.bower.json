@@ -1,7 +1,7 @@
 {
   "name": "angular-localForage",
   "main": "dist/angular-localForage.js",
-  "version": "0.2.3",
+  "version": "0.2.5",
   "homepage": "https://github.com/ocombe/angular-localForage",
   "authors": [
     "Olivier Combe <olivier.combe@gmail.com>"
@@ -27,7 +27,9 @@
     "karma.conf.js",
     "gulpfile.js",
     "package.json",
-    "src"
+    "src",
+    "validate-commit-msg.js",
+    "changelog.js"
   ],
   "devDependencies": {
     "angular-mocks": "~1.2.16"
@@ -36,14 +38,13 @@
     "localforage": "~0.8.1",
     "angular": "*"
   },
-  "_release": "0.2.3",
+  "_release": "0.2.5",
   "_resolution": {
     "type": "version",
-    "tag": "0.2.3",
-    "commit": "65a3550ea2d293883ec7110c841a29a4d066b3cd"
+    "tag": "0.2.5",
+    "commit": "a4410ae1ea1e0b51ee52be19c4bc361c892b3a19"
   },
   "_source": "git://github.com/ocombe/angular-localForage.git",
   "_target": "~0.2.3",
-  "_originalSource": "angular-localForage",
-  "_direct": true
+  "_originalSource": "angular-localForage"
 }

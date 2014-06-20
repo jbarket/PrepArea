@@ -1,14 +1,18 @@
-<ion-view title="{{ charactersCtrl.set_name }}">
+<ion-view title="{{ charactersCtrl.set.name }}">
 
     <ion-content>
         <ion-list>
-            <ion-item ui-sref="tabs.basic({ setName: charactersCtrl.set_name })">
+            <ion-item ui-sref="tabs.basic({ id: charactersCtrl.set._id })">
                 Basic Action Cards
-                <span class="item-note">{{ basicCount(charactersCtrl.set) }}</span>
+                <!--<span class="item-note">-->
+                    <!--{{ charactersCtrl.basic_counts.owned }} / {{ charactersCtrl.basic_counts.total }}-->
+                <!--</span>-->
             </ion-item>
-            <ion-item ng-repeat="character in charactersCtrl.characters" ui-sref="tabs.details({ setName: charactersCtrl.set_name, characterName: character.name })">
-                {{ character.name }}
-                <span class="item-note">{{ cardCount(character.cards) }}</span>
+            <ion-item ng-repeat="character in charactersCtrl.characters | orderBy:character.key" ui-sref="tabs.card_show({ setId: charactersCtrl.set._id, id: character.id })">
+                {{ character.key }}
+                <!--<span class="item-note">-->
+                    <!--{{ charactersCtrl.character_counts[character.id].owned }} / {{ charactersCtrl.character_counts[character.id].total }}-->
+                <!--</span>-->
             </ion-item>
         </ion-list>
     </ion-content>

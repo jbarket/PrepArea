@@ -1,28 +1,33 @@
 <ion-view>
     <ion-nav-buttons side="right">
-        <button class="button button-dark" ng-click="detailsCtrl.enableEditing()">
-            <span ng-hide="detailsCtrl.isEditing">Edit</span>
-            <span ng-show="detailsCtrl.isEditing">Finish</span>
+        <button class="button button-dark" ng-click="showCtrl.enableEditing()">
+            <span ng-hide="showCtrl.isEditing">Edit</span>
+            <span ng-show="showCtrl.isEditing">Finish</span>
         </button>
     </ion-nav-buttons>
     <ion-content detect-gestures gesture-type="swipe">
-        <div ng-hide="detailsCtrl.isEditing">
+        <div ng-hide="showCtrl.isEditing">
 
             <div class="card">
                 <div class="item item-divider">
                     <div class="row">
                         <div class="col col-50">Dice</div>
                         <div class="col col-50" style="text-align: right;">
-                            {{ owned[detailsCtrl.set_name + '-dice-' + detailsCtrl.character.name] || 0 }}
+                            {{ owned[showCtrl.setId + '-dice-' + showCtrl.character._id] || 0 }}
+                        </div>
+                    </div>
+                    <div class="row" ng-show="showCtrl.character.dice" >
+                        <div class="col">
+                            <img ng-src="{{ showCtrl.character.dice }}" />
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="card" ng-repeat="card in detailsCtrl.cards | orderBy:raritySort" ng-model="owned[detailsCtrl.set_name + '-cards-' + card.number]">
+            <div class="card" ng-repeat="card in showCtrl.cards | orderBy:raritySort track by card._id" ng-model="owned['cards-' + card.id]">
                 <div class="item item-text-wrap item-icon-right">
-                    <i ng-show="detailsCtrl.cardOwned(card)" class="icon ion-checkmark-circled"></i>
-                    <h2>{{ card.name }} (#{{ card.number | numberFixedLen:3 }})</h2>
+                    <i ng-show="showCtrl.cardOwned(card)" class="icon ion-checkmark-circled"></i>
+                    <h2>{{ card.name }} (#{{ card.doc.number | numberFixedLen:3 }})</h2>
                     <p>
                         {{ card.cost }} {{ card.cost_type }}
                         <span ng-show="card.affiliation"> / {{ card.affiliation }}</span>
@@ -64,21 +69,21 @@
 
         </div>
 
-        <ion-list ng-show="detailsCtrl.isEditing">
+        <ion-list ng-show="showCtrl.isEditing">
             <div class="item item-divider">Dice</div>
             <div class="item">
                 <div class="row">
                     <div class="col col-20">
-                        <h1>{{ owned[detailsCtrl.set_name + '-dice-' + detailsCtrl.character.name] || 0 }}</h1>
+                        <h1>{{ owned[showCtrl.setId + '-dice-' + showCtrl.character._id] || 0 }}</h1>
                     </div>
                     <div class="col col-offset-50 col-30">
-                        <button class="button button-dark" ng-click="detailsCtrl.addDie()">+</button>
-                        <button class="button button-dark" ng-click="detailsCtrl.removeDie()">-</button>
+                        <button class="button button-dark" ng-click="showCtrl.addDie()">+</button>
+                        <button class="button button-dark" ng-click="showCtrl.removeDie()">-</button>
                     </div>
                 </div>
             </div>
             <div class="item item-divider">Cards</div>
-            <ion-checkbox class="item-icon-right" ng-repeat="card in detailsCtrl.cards | orderBy:raritySort" ng-model="owned[detailsCtrl.set_name + '-cards-' + card.number]">
+            <ion-checkbox class="item-icon-right" ng-repeat="card in showCtrl.cards | orderBy:raritySort track by card._id" ng-model="owned['cards-' + card.id]">
                 {{ card.name }} (#{{ card.number | numberFixedLen:3 }})
                 <i class="icon ion-minus card_{{ card.rarity }}"></i>
             </ion-checkbox>

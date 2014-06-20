@@ -198,3 +198,101 @@ Terminating in response to SpringBoard's termination.
 2014-05-27 20:49:26.601 Prep Area[97432:70b] [CDVTimer][TotalPluginStartup] 1.132011ms
 2014-05-27 20:49:26.756 Prep Area[97432:70b] Resetting plugins due to page load.
 2014-05-27 20:49:27.127 Prep Area[97432:70b] Finished load of: file:///Users/jbarket/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/F55E5BDD-78B8-4B71-BE17-EEF372FE6DA7/Prep%20Area.app/www/index.html#/tab/sets
+2014-05-29 14:48:05.426 Prep Area[16597:70b] Multi-tasking -> Device: YES, App: YES
+2014-05-29 14:48:05.459 Prep Area[16597:70b] Unlimited access to network resources
+2014-05-29 14:48:05.659 Prep Area[16597:70b] [CDVTimer][keyboard] 0.048995ms
+2014-05-29 14:48:05.659 Prep Area[16597:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-05-29 14:48:05.660 Prep Area[16597:70b] [CDVTimer][statusbar] 0.308990ms
+2014-05-29 14:48:05.660 Prep Area[16597:70b] [CDVTimer][TotalPluginStartup] 1.066983ms
+2014-05-29 14:48:05.864 Prep Area[16597:70b] Resetting plugins due to page load.
+2014-05-29 14:48:06.764 Prep Area[16597:70b] Finished load of: file:///Users/jbarket/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/28CEF0FE-DF0A-41BA-93F6-D6303AC36450/Prep%20Area.app/www/index.html#/tab/sets
+2014-05-29 15:09:38.098 Prep Area[17666:70b] Multi-tasking -> Device: YES, App: YES
+2014-05-29 15:09:38.103 Prep Area[17666:70b] Unlimited access to network resources
+2014-05-29 15:09:38.118 Prep Area[17666:70b] [CDVTimer][keyboard] 0.065029ms
+2014-05-29 15:09:38.118 Prep Area[17666:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-05-29 15:09:38.118 Prep Area[17666:70b] [CDVTimer][statusbar] 0.440001ms
+2014-05-29 15:09:38.119 Prep Area[17666:70b] [CDVTimer][TotalPluginStartup] 1.380026ms
+2014-05-29 15:09:38.172 Prep Area[17666:70b] Resetting plugins due to page load.
+2014-05-29 15:09:38.321 Prep Area[17666:70b] Finished load of: file:///Users/jbarket/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/28CEF0FE-DF0A-41BA-93F6-D6303AC36450/Prep%20Area.app/www/index.html#/tab/sets
+2014-05-29 15:09:57.701 Prep Area[18477:70b] Multi-tasking -> Device: YES, App: YES
+2014-05-29 15:09:57.706 Prep Area[18477:70b] Unlimited access to network resources
+2014-05-29 15:09:57.720 Prep Area[18477:70b] [CDVTimer][keyboard] 0.049055ms
+2014-05-29 15:09:57.720 Prep Area[18477:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-05-29 15:09:57.720 Prep Area[18477:70b] [CDVTimer][statusbar] 0.303984ms
+2014-05-29 15:09:57.721 Prep Area[18477:70b] [CDVTimer][TotalPluginStartup] 1.033962ms
+2014-05-29 15:09:57.782 Prep Area[18477:70b] Resetting plugins due to page load.
+2014-05-29 15:09:57.941 Prep Area[18477:70b] Finished load of: file:///Users/jbarket/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/2EF3D1E4-2A7C-4377-B2DE-697AE21077F1/Prep%20Area.app/www/index.html#/tab/sets
+2014-05-29 15:14:24.682 Prep Area[19282:70b] Multi-tasking -> Device: YES, App: YES
+2014-05-29 15:14:24.687 Prep Area[19282:70b] Unlimited access to network resources
+2014-05-29 15:14:24.702 Prep Area[19282:70b] [CDVTimer][keyboard] 0.060022ms
+2014-05-29 15:14:24.702 Prep Area[19282:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-05-29 15:14:24.703 Prep Area[19282:70b] [CDVTimer][statusbar] 0.399947ms
+2014-05-29 15:14:24.703 Prep Area[19282:70b] [CDVTimer][TotalPluginStartup] 1.426041ms
+2014-05-29 15:14:24.733 Prep Area[19282:70b] Resetting plugins due to page load.
+2014-05-29 15:14:24.874 Prep Area[19282:70b] Finished load of: file:///Users/jbarket/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/2EF3D1E4-2A7C-4377-B2DE-697AE21077F1/Prep%20Area.app/www/index.html#/tab/sets
+2014-05-29 15:16:19.591 Prep Area[20087:70b] Multi-tasking -> Device: YES, App: YES
+2014-05-29 15:16:19.597 Prep Area[20087:70b] Unlimited access to network resources
+2014-05-29 15:16:19.610 Prep Area[20087:70b] [CDVTimer][keyboard] 0.048041ms
+2014-05-29 15:16:19.610 Prep Area[20087:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-05-29 15:16:19.611 Prep Area[20087:70b] [CDVTimer][statusbar] 0.454009ms
+2014-05-29 15:16:19.611 Prep Area[20087:70b] [CDVTimer][TotalPluginStartup] 1.321971ms
+2014-05-29 15:16:19.692 Prep Area[20087:70b] Resetting plugins due to page load.
+2014-05-29 15:16:19.845 Prep Area[20087:70b] Finished load of: file:///Users/jbarket/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/70A4C634-D054-43D3-9432-99A9707D8F4F/Prep%20Area.app/www/index.html#/tab/sets
+2014-05-29 15:17:56.872 Prep Area[20889:70b] Multi-tasking -> Device: YES, App: YES
+2014-05-29 15:17:56.878 Prep Area[20889:70b] Unlimited access to network resources
+2014-05-29 15:17:56.892 Prep Area[20889:70b] [CDVTimer][keyboard] 0.050008ms
+2014-05-29 15:17:56.893 Prep Area[20889:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-05-29 15:17:56.893 Prep Area[20889:70b] [CDVTimer][statusbar] 0.275016ms
+2014-05-29 15:17:56.893 Prep Area[20889:70b] [CDVTimer][TotalPluginStartup] 0.941992ms
+2014-05-29 15:17:56.934 Prep Area[20889:70b] Resetting plugins due to page load.
+2014-05-29 15:17:57.085 Prep Area[20889:70b] Finished load of: file:///Users/jbarket/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/E0578A3A-531F-44B8-85E0-A693307C0297/Prep%20Area.app/www/index.html#/tab/sets
+Terminating in response to SpringBoard's termination.
+2014-05-29 15:20:32.883 Prep Area[21923:70b] Multi-tasking -> Device: YES, App: YES
+2014-05-29 15:20:32.889 Prep Area[21923:70b] Unlimited access to network resources
+2014-05-29 15:20:32.903 Prep Area[21923:70b] [CDVTimer][keyboard] 0.045955ms
+2014-05-29 15:20:32.904 Prep Area[21923:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-05-29 15:20:32.904 Prep Area[21923:70b] [CDVTimer][statusbar] 0.377953ms
+2014-05-29 15:20:32.905 Prep Area[21923:70b] [CDVTimer][TotalPluginStartup] 1.142979ms
+2014-05-29 15:20:32.958 Prep Area[21923:70b] Resetting plugins due to page load.
+2014-05-29 15:20:33.102 Prep Area[21923:70b] Finished load of: file:///Users/jbarket/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/E0578A3A-531F-44B8-85E0-A693307C0297/Prep%20Area.app/www/index.html#/tab/sets
+2014-05-29 15:21:28.286 Prep Area[22735:70b] Multi-tasking -> Device: YES, App: YES
+2014-05-29 15:21:28.292 Prep Area[22735:70b] Unlimited access to network resources
+2014-05-29 15:21:28.304 Prep Area[22735:70b] [CDVTimer][keyboard] 0.045002ms
+2014-05-29 15:21:28.304 Prep Area[22735:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-05-29 15:21:28.305 Prep Area[22735:70b] [CDVTimer][statusbar] 0.441968ms
+2014-05-29 15:21:28.305 Prep Area[22735:70b] [CDVTimer][TotalPluginStartup] 1.425982ms
+2014-05-29 15:21:28.390 Prep Area[22735:70b] Resetting plugins due to page load.
+2014-05-29 15:21:28.550 Prep Area[22735:70b] Finished load of: file:///Users/jbarket/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/51FD6936-2DDD-4DE7-88F7-9ED6EF201A45/Prep%20Area.app/www/index.html#/tab/sets
+2014-05-29 15:22:47.088 Prep Area[23528:70b] Multi-tasking -> Device: YES, App: YES
+2014-05-29 15:22:47.094 Prep Area[23528:70b] Unlimited access to network resources
+2014-05-29 15:22:47.107 Prep Area[23528:70b] [CDVTimer][keyboard] 0.048995ms
+2014-05-29 15:22:47.108 Prep Area[23528:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-05-29 15:22:47.108 Prep Area[23528:70b] [CDVTimer][statusbar] 0.424981ms
+2014-05-29 15:22:47.109 Prep Area[23528:70b] [CDVTimer][TotalPluginStartup] 1.356006ms
+2014-05-29 15:22:47.182 Prep Area[23528:70b] Resetting plugins due to page load.
+2014-05-29 15:22:47.343 Prep Area[23528:70b] Finished load of: file:///Users/jbarket/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/CFC92F17-6517-464B-9C5B-40DF63429C50/Prep%20Area.app/www/index.html#/tab/sets
+2014-05-29 15:24:08.951 Prep Area[24335:70b] Multi-tasking -> Device: YES, App: YES
+2014-05-29 15:24:08.956 Prep Area[24335:70b] Unlimited access to network resources
+2014-05-29 15:24:08.969 Prep Area[24335:70b] [CDVTimer][keyboard] 0.044048ms
+2014-05-29 15:24:08.970 Prep Area[24335:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-05-29 15:24:08.970 Prep Area[24335:70b] [CDVTimer][statusbar] 0.338018ms
+2014-05-29 15:24:08.971 Prep Area[24335:70b] [CDVTimer][TotalPluginStartup] 1.240969ms
+2014-05-29 15:24:09.050 Prep Area[24335:70b] Resetting plugins due to page load.
+2014-05-29 15:24:09.224 Prep Area[24335:70b] Finished load of: file:///Users/jbarket/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/F23B7D19-E38D-4D26-8610-F20025642305/Prep%20Area.app/www/index.html#/tab/sets
+2014-05-29 15:27:14.034 Prep Area[25316:70b] Multi-tasking -> Device: YES, App: YES
+2014-05-29 15:27:14.040 Prep Area[25316:70b] Unlimited access to network resources
+2014-05-29 15:27:14.053 Prep Area[25316:70b] [CDVTimer][keyboard] 0.046015ms
+2014-05-29 15:27:14.054 Prep Area[25316:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-05-29 15:27:14.054 Prep Area[25316:70b] [CDVTimer][statusbar] 0.478983ms
+2014-05-29 15:27:14.055 Prep Area[25316:70b] [CDVTimer][TotalPluginStartup] 1.392961ms
+2014-05-29 15:27:14.132 Prep Area[25316:70b] Resetting plugins due to page load.
+2014-05-29 15:27:14.293 Prep Area[25316:70b] Finished load of: file:///Users/jbarket/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/4C408981-2E9C-4850-B618-104911EDE498/Prep%20Area.app/www/index.html#/tab/sets
+2014-05-29 15:28:22.868 Prep Area[26108:70b] Multi-tasking -> Device: YES, App: YES
+2014-05-29 15:28:22.873 Prep Area[26108:70b] Unlimited access to network resources
+2014-05-29 15:28:22.886 Prep Area[26108:70b] [CDVTimer][keyboard] 0.055969ms
+2014-05-29 15:28:22.886 Prep Area[26108:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-05-29 15:28:22.887 Prep Area[26108:70b] [CDVTimer][statusbar] 0.428021ms
+2014-05-29 15:28:22.887 Prep Area[26108:70b] [CDVTimer][TotalPluginStartup] 1.253009ms
+2014-05-29 15:28:22.961 Prep Area[26108:70b] Resetting plugins due to page load.
+2014-05-29 15:28:23.138 Prep Area[26108:70b] Finished load of: file:///Users/jbarket/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/59CE6A8D-754E-45F0-825E-10D621F69B67/Prep%20Area.app/www/index.html#/tab/sets
+Terminating in response to SpringBoard's termination.
