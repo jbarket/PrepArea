@@ -206,7 +206,7 @@ angular.module('providers', ['pouchdb'])
     .factory('Sets', function(pouchdb, $q, $rootScope) {
 
 
-        var dataVersion = '0.2.3';
+        var dataVersion = '0.2.9';
 
         var Set = {
             all: function () {
@@ -415,7 +415,18 @@ angular.module('providers', ['pouchdb'])
                     },
 
 
-                { _id: "metadata", version: '0.2.3' },
+                { _id: "metadata", version: '0.2.9' },
+                    { _id: 'op', type: 'set', name: 'Organized Play', release_date: '' },
+                    {
+                        _id: "op_basics",
+                        type: 'basics',
+                        set: 'op',
+                        cards: [
+                            { _id: "op_basic_1", type: 'basic', set: 'op', "number": 1, "name": "Teamwork", "cost": 3, "cost_type": "Generic", "affiliation": "", "rarity": "Common", "die_limit": 3, "starter": "", "ability": "Each of your fielded characters gains +1A and +1D for each other of your fielded characters that shares a team affiliation with it.", "ability_burst": "", "ability_double_burst": null, "ability_global": ""},
+                            { _id: "op_basic_2", type: 'basic', set: 'op', "number": 2, "name": "Rally", "cost": 3, "cost_type": "Generic", "affiliation": "", "rarity": "Common", "die_limit": 3, "starter": "", "ability": "Move up to 2 Sidekicks from your used pile to the field.", "ability_burst": "", "ability_double_burst": "Move 3 Sidekicks instead.", "ability_global": ""},
+                        ]
+                    },
+
                     { _id: 'avx', type: 'set', name: 'Avengers vs. X-Men', release_date: '4/23/2014' },
 
                     { 
@@ -723,12 +734,13 @@ angular.module('providers', ['pouchdb'])
 
                     },
                     {
-                        _id: "character_spider_man", type: 'character', sets: ['avx'], name: 'Spider-Man',
+                        _id: "character_spider_man", type: 'character', sets: ['avx', 'op'], name: 'Spider-Man',
                         cards: [
                             { _id: "avx_card_16", type: 'card', set: 'avx', "number": 16, "name": "Tiger", "cost": 4, "cost_type": "Fist", "affiliation": "", "rarity": "Common", "die_limit": 4, "starter": "Y", "ability": "You may pay [1 Fist] to prevent Spider-Man from being affected by an ability or game effect (other than damage from a character engaged with him).", "ability_burst": "", "ability_double_burst": null, "ability_global": ""},
                             { _id: "avx_card_17", type: 'card', set: 'avx', "number": 17, "name": "Webhead", "cost": 4, "cost_type": "Fist", "affiliation": "", "rarity": "Common", "die_limit": 4, "starter": "Y", "ability": "When Spider-Man assigns to attack,  you may pay [1 Fist] to give him +4D (you can only do this once turn per die).", "ability_burst": "", "ability_double_burst": null, "ability_global": ""},
                             { _id: "avx_card_18", type: 'card', set: 'avx', "number": 18, "name": "Webslinger", "cost": 5, "cost_type": "Fist", "affiliation": "", "rarity": "Common", "die_limit": 4, "starter": "Y", "ability": "When Spider-Man assigns to attack, you may pay [1 Fist] to force every opposing character to block him if able.", "ability_burst": "", "ability_double_burst": null, "ability_global": ""},
-                            { _id: "avx_card_91", type: 'card', set: 'avx', "number": 91, "name": "Wall-Crawler", "cost": 4, "cost_type": "Fist", "affiliation": "", "rarity": "Uncommon", "die_limit": 5, "starter": "", "ability": "If Spider-Man attacks and is not blocked, you may pay [2 Fist] to change your opponent's life to 10 (before damage is dealt).", "ability_burst": "", "ability_double_burst": null, "ability_global": ""}
+                            { _id: "avx_card_91", type: 'card', set: 'avx', "number": 91, "name": "Wall-Crawler", "cost": 4, "cost_type": "Fist", "affiliation": "", "rarity": "Uncommon", "die_limit": 5, "starter": "", "ability": "If Spider-Man attacks and is not blocked, you may pay [2 Fist] to change your opponent's life to 10 (before damage is dealt).", "ability_burst": "", "ability_double_burst": null, "ability_global": ""},
+                            { _id: "op_card_8", type: 'card', set: 'op', "number": 8, "name": "The Amazing", "cost": 6, "cost_type": "Fist", "affiliation": "", "rarity": "Common", "die_limit": 2, "starter": "", "ability": "When Spider-Man attacks, you may pay [3 Fist] to make your opponent lose half his life, rounded down (before damage is dealt).", "ability_burst": "", "ability_double_burst": null, "ability_global": ""}
                         ]
 
                     },
@@ -752,12 +764,13 @@ angular.module('providers', ['pouchdb'])
 
                     },
                     {
-                        _id: "character_thor", type: 'character', sets: ['avx'], name: 'Thor',
+                        _id: "character_thor", type: 'character', sets: ['avx', 'op'], name: 'Thor',
                         cards: [
                             { _id: "avx_card_22", type: 'card', set: 'avx', "number": 22, "name": "Legendary Warrior", "cost": 6, "cost_type": "Bolt", "affiliation": "Avengers", "rarity": "Common", "die_limit": 4, "starter": "Y", "ability": "When Thor damages your opponent, knock out an opposing [Fist] character.", "ability_burst": "", "ability_double_burst": null, "ability_global": ""},
                             { _id: "avx_card_23", type: 'card', set: 'avx', "number": 23, "name": "Lord of Asgard", "cost": 6, "cost_type": "Bolt", "affiliation": "Avengers", "rarity": "Common", "die_limit": 4, "starter": "Y", "ability": "Thor can't be blocked by [Fist] characters.", "ability_burst": "", "ability_double_burst": null, "ability_global": ""},
                             { _id: "avx_card_24", type: 'card', set: 'avx', "number": 24, "name": "Odinson", "cost": 6, "cost_type": "Bolt", "affiliation": "Avengers", "rarity": "Common", "die_limit": 4, "starter": "Y", "ability": "When fielded, capture all opposing [Fist] characters (return them at the end of the turn).", "ability_burst": "", "ability_double_burst": null, "ability_global": ""},
-                            { _id: "avx_card_94", type: 'card', set: 'avx', "number": 94, "name": "God of Thunder", "cost": 6, "cost_type": "Bolt", "affiliation": "Avengers", "rarity": "Uncommon", "die_limit": 5, "starter": "", "ability": "At the start of each attack step, Thor gets +4A and +4D for each opposing [Fist] character in the field (until the end of the turn).", "ability_burst": "", "ability_double_burst": null, "ability_global": ""}
+                            { _id: "avx_card_94", type: 'card', set: 'avx', "number": 94, "name": "God of Thunder", "cost": 6, "cost_type": "Bolt", "affiliation": "Avengers", "rarity": "Uncommon", "die_limit": 5, "starter": "", "ability": "At the start of each attack step, Thor gets +4A and +4D for each opposing [Fist] character in the field (until the end of the turn).", "ability_burst": "", "ability_double_burst": null, "ability_global": ""},
+                            { _id: "op_card_7", type: 'card', set: 'op', "number": 7, "name": "The Mighty", "cost": 7, "cost_type": "Bolt", "affiliation": "Avengers", "rarity": "Common", "die_limit": 4, "starter": "", "ability": "When fielded, you may knock out an opposing [Fist] character and gain life equal to its level.", "ability_burst": "", "ability_double_burst": null, "ability_global": ""}
                         ]
 
                     },

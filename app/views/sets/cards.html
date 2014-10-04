@@ -26,7 +26,7 @@
 
                 </div>
 
-                <div ng-if="card.type && (card.type === 'basic' || card.type === 'card')"
+                <div ng-if="card.type && (card.type === 'basic' || card.type === 'card') && card.set === cardListCtrl.set._id"
                      class="item item-icon-left item-{{ card.type }}">
 
 

@@ -82,6 +82,9 @@ angular.module('collection', ['ionic', 'ui.router', 'providers', 'formatters'])
                 if (card.doc) {
                     return 37;
                 }
+                else if (card.set !== self.set._id) {
+                    return 0;
+                }
                 else if (card.type === 'basic') {
                     return 50;
                 }
