@@ -25,3 +25,7 @@ Inside the seedData variable in the seedPouch method, we also have records for e
 We also have a record for each set's basic cards (so AvX has one record for all of its basics), and we have one record for each character _regardless of set_, so Angel is only in there once.
 
 For each character, they have a sets array which contains the _id value of any set they appear in. They also have a cards array which contains a record for each individual card including information like what set that card belongs to.
+
+# License
+
+All Prep Area specific code is licensed under the MIT License located in this repository. All other information belongs to their respective parties.
